@@ -1,0 +1,75 @@
+ppo with teacher actor
+no imitation
+MixedMlpBarlowTwinsActor(
+  (mlp_encoder): Sequential(
+    (0): Linear(in_features=235, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): Linear(in_features=256, out_features=128, bias=True)
+    (6): ELU(alpha=1.0)
+    (7): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (8): Linear(in_features=128, out_features=23, bias=True)
+  )
+  (actor): MixedMlp(
+    (gate): Sequential(
+      (0): Linear(in_features=70, out_features=128, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=128, out_features=128, bias=True)
+      (3): ELU(alpha=1.0)
+      (4): Linear(in_features=128, out_features=4, bias=True)
+    )
+  )
+  (obs_encoder): Sequential(
+    (0): Linear(in_features=47, out_features=256, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=256, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (5): Linear(in_features=128, out_features=16, bias=True)
+  )
+  (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+)
+running with imi loss off
+################################################################################
+                      [1m Learning iteration 0/6000 
+                       Computation: 7237 steps/s (collection: 2.657s, learning 0.738s)
+               Value function loss: 0.00153
+          cost value function loss: 1.03738
+                    Surrogate loss: -0.01254
+                         viol loss: 0.00000
+             Mean action noise std: 1.00
+                       Mean reward: 0.02
+               Mean episode length: 22.34
+      Mean episode rew_action_rate: -0.00285
+Mean episode rew_action_smoothness: -0.00819
+       Mean episode rew_ang_vel_xy: -0.00305
+      Mean episode rew_base_height: -0.00001
+Mean episode rew_default_joint_pos: -0.00005
+          Mean episode rew_dof_acc: -0.00276
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.00039
+        Mean episode rew_foot_slip: -0.00055
+        Mean episode rew_lin_vel_z: -0.00107
+        Mean episode rew_low_speed: -0.00219
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -0.00002
+   Mean episode rew_track_vel_hard: -0.00154
+ Mean episode rew_tracking_ang_vel: 0.00138
+ Mean episode rew_tracking_lin_vel: 0.00982
+ Mean episode rew_vel_mismatch_exp: 0.00262
+  Mean episode cost_acc_smoothness: 0.27516
+     Mean episode cost_base_height: 0.00001
+       Mean episode cost_collision: 0.00085
+  Mean episode cost_dof_vel_limits: 0.00664
+   Mean episode cost_feet_air_time: 0.00113
+         Mean episode cost_hip_pos: 0.00078
+       Mean episode cost_pos_limit: 0.00161
+     Mean episode cost_stand_still: 0.00232
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24576
+                    Iteration time: 3.40s
+                        Total time: 3.40s
+                               ETA: 20375.1s

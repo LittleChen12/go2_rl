@@ -1,0 +1,18 @@
+{
+    "os": "Linux-5.15.0-117-generic-x86_64-with-glibc2.10",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-08-09T11:11:52.337950",
+    "startedAt": "2024-08-09T11:11:46.062057",
+    "docker": null,
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_count": 1,
+    "cpu_count": 28,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "train.py",
+    "codePath": "train.py",
+    "host": "pi-LEGION-REN7000K-26IRB",
+    "username": "pi",
+    "executable": "/home/pi/anaconda3/envs/HIT1/bin/python3"
+}

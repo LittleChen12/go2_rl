@@ -1,0 +1,1782 @@
+ppo with teacher actor
+no imitation
+MixedMlpBarlowTwinsActor(
+  (mlp_encoder): Sequential(
+    (0): Linear(in_features=225, out_features=512, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=512, out_features=256, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): LayerNorm((256,), eps=1e-05, elementwise_affine=True)
+    (5): Linear(in_features=256, out_features=128, bias=True)
+    (6): ELU(alpha=1.0)
+    (7): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (8): Linear(in_features=128, out_features=23, bias=True)
+  )
+  (actor): MixedMlp(
+    (gate): Sequential(
+      (0): Linear(in_features=68, out_features=128, bias=True)
+      (1): ELU(alpha=1.0)
+      (2): Linear(in_features=128, out_features=128, bias=True)
+      (3): ELU(alpha=1.0)
+      (4): Linear(in_features=128, out_features=4, bias=True)
+    )
+  )
+  (obs_encoder): Sequential(
+    (0): Linear(in_features=45, out_features=256, bias=True)
+    (1): ELU(alpha=1.0)
+    (2): Linear(in_features=256, out_features=128, bias=True)
+    (3): ELU(alpha=1.0)
+    (4): LayerNorm((128,), eps=1e-05, elementwise_affine=True)
+    (5): Linear(in_features=128, out_features=16, bias=True)
+  )
+  (bn): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+)
+running with imi loss off
+################################################################################
+                      [1m Learning iteration 0/6000 
+                       Computation: 5844 steps/s (collection: 3.433s, learning 0.772s)
+               Value function loss: 1.17051
+          cost value function loss: 618352004584200732672.00000
+                    Surrogate loss: -0.00060
+                         viol loss: 0.00000
+             Mean action noise std: 1.00
+                       Mean reward: 0.01
+               Mean episode length: 21.80
+      Mean episode rew_action_rate: -0.00285
+Mean episode rew_action_smoothness: -0.00815
+       Mean episode rew_ang_vel_xy: -60620619644928.00000
+      Mean episode rew_base_height: -475262304.00000
+Mean episode rew_default_joint_pos: -0.00007
+          Mean episode rew_dof_acc: -7537692770304.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -18.37050
+        Mean episode rew_foot_slip: -0.01290
+        Mean episode rew_lin_vel_z: -364126994432.00000
+        Mean episode rew_low_speed: -0.00203
+Mean episode rew_orientation_eular: 0.00034
+           Mean episode rew_powers: -83.50836
+   Mean episode rew_track_vel_hard: -6074.09082
+ Mean episode rew_tracking_ang_vel: 0.00156
+ Mean episode rew_tracking_lin_vel: 0.00309
+ Mean episode rew_vel_mismatch_exp: 0.00272
+  Mean episode cost_acc_smoothness: 1449797.75000
+     Mean episode cost_base_height: 365586432.00000
+       Mean episode cost_collision: 0.00099
+  Mean episode cost_dof_vel_limits: 0.00125
+   Mean episode cost_feet_air_time: 0.00065
+         Mean episode cost_hip_pos: 0.00096
+       Mean episode cost_pos_limit: 0.00205
+     Mean episode cost_stand_still: 0.00338
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 24576
+                    Iteration time: 4.21s
+                        Total time: 4.21s
+                               ETA: 25231.6s
+################################################################################
+                      [1m Learning iteration 1/6000 
+                       Computation: 6219 steps/s (collection: 3.294s, learning 0.658s)
+               Value function loss: 0.79542
+          cost value function loss: 82390973535145082725859328.00000
+                    Surrogate loss: -0.00010
+                         viol loss: 0.38071
+             Mean action noise std: 1.00
+                       Mean reward: 0.02
+               Mean episode length: 30.04
+      Mean episode rew_action_rate: -0.00629
+Mean episode rew_action_smoothness: -0.01831
+       Mean episode rew_ang_vel_xy: -2574983311092125523771392.00000
+      Mean episode rew_base_height: -195485.42188
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -35731190148388070883328.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1417274.50000
+        Mean episode rew_foot_slip: -0.00235
+        Mean episode rew_lin_vel_z: -26026871793597284352.00000
+        Mean episode rew_low_speed: -0.00454
+Mean episode rew_orientation_eular: 0.00060
+           Mean episode rew_powers: -5415770.00000
+   Mean episode rew_track_vel_hard: -1030743296.00000
+ Mean episode rew_tracking_ang_vel: 0.00330
+ Mean episode rew_tracking_lin_vel: 0.00742
+ Mean episode rew_vel_mismatch_exp: 0.00586
+  Mean episode cost_acc_smoothness: 94023794688.00000
+     Mean episode cost_base_height: 150373.42188
+       Mean episode cost_collision: 0.00173
+  Mean episode cost_dof_vel_limits: 0.00199
+   Mean episode cost_feet_air_time: 0.00124
+         Mean episode cost_hip_pos: 0.00228
+       Mean episode cost_pos_limit: 0.00592
+     Mean episode cost_stand_still: 0.00855
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 49152
+                    Iteration time: 3.95s
+                        Total time: 8.16s
+                               ETA: 24467.0s
+################################################################################
+                      [1m Learning iteration 2/6000 
+                       Computation: 6231 steps/s (collection: 3.284s, learning 0.660s)
+               Value function loss: 6.69836
+          cost value function loss: inf
+                    Surrogate loss: -0.00074
+                         viol loss: 0.33348
+             Mean action noise std: 1.00
+                       Mean reward: 0.02
+               Mean episode length: 28.76
+      Mean episode rew_action_rate: -0.00711
+Mean episode rew_action_smoothness: -0.02066
+       Mean episode rew_ang_vel_xy: -17257592010820434473779200.00000
+      Mean episode rew_base_height: -163474298102200926208.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -106536342137143526686720.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1655980.87500
+        Mean episode rew_foot_slip: -13.88013
+        Mean episode rew_lin_vel_z: -6180192490888580458086400.00000
+        Mean episode rew_low_speed: -0.00444
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -10274121.00000
+   Mean episode rew_track_vel_hard: -2095342848.00000
+ Mean episode rew_tracking_ang_vel: 0.00344
+ Mean episode rew_tracking_lin_vel: 0.00920
+ Mean episode rew_vel_mismatch_exp: 0.00657
+  Mean episode cost_acc_smoothness: 185751420928.00000
+     Mean episode cost_base_height: 125749456018880856064.00000
+       Mean episode cost_collision: 0.00174
+  Mean episode cost_dof_vel_limits: 0.00214
+   Mean episode cost_feet_air_time: 0.00144
+         Mean episode cost_hip_pos: 0.00255
+       Mean episode cost_pos_limit: 0.00588
+     Mean episode cost_stand_still: 0.00810
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 73728
+                    Iteration time: 3.94s
+                        Total time: 12.10s
+                               ETA: 24194.0s
+################################################################################
+                      [1m Learning iteration 3/6000 
+                       Computation: 6076 steps/s (collection: 3.363s, learning 0.681s)
+               Value function loss: 2.98979
+          cost value function loss: 186887208531865431089086464.00000
+                    Surrogate loss: -0.00322
+                         viol loss: 0.28661
+             Mean action noise std: 1.02
+                       Mean reward: 0.03
+               Mean episode length: 33.32
+      Mean episode rew_action_rate: -0.00791
+Mean episode rew_action_smoothness: -0.02300
+       Mean episode rew_ang_vel_xy: -1101940180364260657856512.00000
+      Mean episode rew_base_height: -81.60235
+Mean episode rew_default_joint_pos: -0.00012
+          Mean episode rew_dof_acc: -95536750407253827256320.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -2929662.75000
+        Mean episode rew_foot_slip: -0.00670
+        Mean episode rew_lin_vel_z: -120552979348058013696.00000
+        Mean episode rew_low_speed: -0.00503
+Mean episode rew_orientation_eular: 0.00075
+           Mean episode rew_powers: -8756379.00000
+   Mean episode rew_track_vel_hard: -1315282560.00000
+ Mean episode rew_tracking_ang_vel: 0.00391
+ Mean episode rew_tracking_lin_vel: 0.01092
+ Mean episode rew_vel_mismatch_exp: 0.00727
+  Mean episode cost_acc_smoothness: 152020762624.00000
+     Mean episode cost_base_height: 62.77103
+       Mean episode cost_collision: 0.00192
+  Mean episode cost_dof_vel_limits: 0.00201
+   Mean episode cost_feet_air_time: 0.00146
+         Mean episode cost_hip_pos: 0.00272
+       Mean episode cost_pos_limit: 0.00604
+     Mean episode cost_stand_still: 0.01084
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 98304
+                    Iteration time: 4.04s
+                        Total time: 16.15s
+                               ETA: 24206.1s
+################################################################################
+                      [1m Learning iteration 4/6000 
+                       Computation: 6188 steps/s (collection: 3.297s, learning 0.674s)
+               Value function loss: 1.48180
+          cost value function loss: 117416318449221632.00000
+                    Surrogate loss: -0.00268
+                         viol loss: 0.25798
+             Mean action noise std: 1.03
+                       Mean reward: 0.02
+               Mean episode length: 32.38
+      Mean episode rew_action_rate: -0.00789
+Mean episode rew_action_smoothness: -0.02294
+       Mean episode rew_ang_vel_xy: -1247493518000128.00000
+      Mean episode rew_base_height: -135.23065
+Mean episode rew_default_joint_pos: -0.00012
+          Mean episode rew_dof_acc: -72791223173120.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -157.77701
+        Mean episode rew_foot_slip: -0.00277
+        Mean episode rew_lin_vel_z: -403465895936.00000
+        Mean episode rew_low_speed: -0.00492
+Mean episode rew_orientation_eular: 0.00076
+           Mean episode rew_powers: -229.23166
+   Mean episode rew_track_vel_hard: -5766.10059
+ Mean episode rew_tracking_ang_vel: 0.00387
+ Mean episode rew_tracking_lin_vel: 0.01078
+ Mean episode rew_vel_mismatch_exp: 0.00714
+  Mean episode cost_acc_smoothness: 3979716.50000
+     Mean episode cost_base_height: 104.02357
+       Mean episode cost_collision: 0.00204
+  Mean episode cost_dof_vel_limits: 0.00202
+   Mean episode cost_feet_air_time: 0.00146
+         Mean episode cost_hip_pos: 0.00266
+       Mean episode cost_pos_limit: 0.00569
+     Mean episode cost_stand_still: 0.01136
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 122880
+                    Iteration time: 3.97s
+                        Total time: 20.12s
+                               ETA: 24124.1s
+################################################################################
+                      [1m Learning iteration 5/6000 
+                       Computation: 6136 steps/s (collection: 3.343s, learning 0.662s)
+               Value function loss: 1.20071
+          cost value function loss: 395527036.00000
+                    Surrogate loss: -0.00168
+                         viol loss: 0.36154
+             Mean action noise std: 1.03
+                       Mean reward: 0.02
+               Mean episode length: 30.57
+      Mean episode rew_action_rate: -0.00813
+Mean episode rew_action_smoothness: -0.02365
+       Mean episode rew_ang_vel_xy: -0.00884
+      Mean episode rew_base_height: -0.00003
+Mean episode rew_default_joint_pos: -0.00012
+          Mean episode rew_dof_acc: -0.00386
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.00017
+        Mean episode rew_foot_slip: -0.00278
+        Mean episode rew_lin_vel_z: -0.00146
+        Mean episode rew_low_speed: -0.00545
+Mean episode rew_orientation_eular: 0.00073
+           Mean episode rew_powers: -0.00002
+   Mean episode rew_track_vel_hard: -0.00339
+ Mean episode rew_tracking_ang_vel: 0.00371
+ Mean episode rew_tracking_lin_vel: 0.01012
+ Mean episode rew_vel_mismatch_exp: 0.00718
+  Mean episode cost_acc_smoothness: 0.27872
+     Mean episode cost_base_height: 0.00002
+       Mean episode cost_collision: 0.00185
+  Mean episode cost_dof_vel_limits: 0.00210
+   Mean episode cost_feet_air_time: 0.00150
+         Mean episode cost_hip_pos: 0.00271
+       Mean episode cost_pos_limit: 0.00671
+     Mean episode cost_stand_still: 0.00936
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 147456
+                    Iteration time: 4.01s
+                        Total time: 24.12s
+                               ETA: 24101.8s
+################################################################################
+                      [1m Learning iteration 6/6000 
+                       Computation: 13004 steps/s (collection: 1.230s, learning 0.660s)
+               Value function loss: 1.65790
+          cost value function loss: 364486390.40000
+                    Surrogate loss: -0.00210
+                         viol loss: 0.29521
+             Mean action noise std: 1.04
+                       Mean reward: 0.02
+               Mean episode length: 31.75
+      Mean episode rew_action_rate: -0.00837
+Mean episode rew_action_smoothness: -0.02436
+       Mean episode rew_ang_vel_xy: -0.19741
+      Mean episode rew_base_height: -0.00006
+Mean episode rew_default_joint_pos: -0.00012
+          Mean episode rew_dof_acc: -1.12679
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.00042
+        Mean episode rew_foot_slip: -0.00283
+        Mean episode rew_lin_vel_z: -0.07880
+        Mean episode rew_low_speed: -0.00545
+Mean episode rew_orientation_eular: 0.00077
+           Mean episode rew_powers: -0.00005
+   Mean episode rew_track_vel_hard: -0.00352
+ Mean episode rew_tracking_ang_vel: 0.00380
+ Mean episode rew_tracking_lin_vel: 0.01053
+ Mean episode rew_vel_mismatch_exp: 0.00732
+  Mean episode cost_acc_smoothness: 0.76399
+     Mean episode cost_base_height: 0.00004
+       Mean episode cost_collision: 0.00195
+  Mean episode cost_dof_vel_limits: 0.00201
+   Mean episode cost_feet_air_time: 0.00155
+         Mean episode cost_hip_pos: 0.00277
+       Mean episode cost_pos_limit: 0.00628
+     Mean episode cost_stand_still: 0.00728
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 172032
+                    Iteration time: 1.89s
+                        Total time: 26.01s
+                               ETA: 22273.4s
+################################################################################
+                      [1m Learning iteration 7/6000 
+                       Computation: 17398 steps/s (collection: 0.754s, learning 0.658s)
+               Value function loss: 1.08032
+          cost value function loss: 1666899144543346362417152.00000
+                    Surrogate loss: -0.00134
+                         viol loss: 0.40060
+             Mean action noise std: 1.05
+                       Mean reward: 0.03
+               Mean episode length: 31.04
+      Mean episode rew_action_rate: -0.00845
+Mean episode rew_action_smoothness: -0.02454
+       Mean episode rew_ang_vel_xy: -14282204699685084463104.00000
+      Mean episode rew_base_height: -28725.95117
+Mean episode rew_default_joint_pos: -0.00012
+          Mean episode rew_dof_acc: -1177281334253805633536.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -166765.85938
+        Mean episode rew_foot_slip: -0.00284
+        Mean episode rew_lin_vel_z: -2391495239895351296.00000
+        Mean episode rew_low_speed: -0.00584
+Mean episode rew_orientation_eular: 0.00078
+           Mean episode rew_powers: -666708.18750
+   Mean episode rew_track_vel_hard: -193901664.00000
+ Mean episode rew_tracking_ang_vel: 0.00405
+ Mean episode rew_tracking_lin_vel: 0.01061
+ Mean episode rew_vel_mismatch_exp: 0.00724
+  Mean episode cost_acc_smoothness: 11574796288.00000
+     Mean episode cost_base_height: 22096.88867
+       Mean episode cost_collision: 0.00168
+  Mean episode cost_dof_vel_limits: 0.00222
+   Mean episode cost_feet_air_time: 0.00150
+         Mean episode cost_hip_pos: 0.00272
+       Mean episode cost_pos_limit: 0.00549
+     Mean episode cost_stand_still: 0.01140
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 196608
+                    Iteration time: 1.41s
+                        Total time: 27.42s
+                               ETA: 20544.1s
+################################################################################
+                      [1m Learning iteration 8/6000 
+                       Computation: 7866 steps/s (collection: 2.475s, learning 0.649s)
+               Value function loss: 2.31243
+          cost value function loss: 1432626988876526780416.00000
+                    Surrogate loss: -0.00277
+                         viol loss: 0.31484
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 35.47
+      Mean episode rew_action_rate: -0.00827
+Mean episode rew_action_smoothness: -0.02400
+       Mean episode rew_ang_vel_xy: -453566525671737393152.00000
+      Mean episode rew_base_height: -0.24995
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -3521089230929395712.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -6834.09863
+        Mean episode rew_foot_slip: -0.25129
+        Mean episode rew_lin_vel_z: -14123929085935616.00000
+        Mean episode rew_low_speed: -0.00517
+Mean episode rew_orientation_eular: 0.00071
+           Mean episode rew_powers: -48626.38672
+   Mean episode rew_track_vel_hard: -5077036.00000
+ Mean episode rew_tracking_ang_vel: 0.00353
+ Mean episode rew_tracking_lin_vel: 0.00991
+ Mean episode rew_vel_mismatch_exp: 0.00690
+  Mean episode cost_acc_smoothness: 844208064.00000
+     Mean episode cost_base_height: 0.19227
+       Mean episode cost_collision: 0.00205
+  Mean episode cost_dof_vel_limits: 0.00207
+   Mean episode cost_feet_air_time: 0.00148
+         Mean episode cost_hip_pos: 0.00269
+       Mean episode cost_pos_limit: 0.00606
+     Mean episode cost_stand_still: 0.00897
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 221184
+                    Iteration time: 3.12s
+                        Total time: 30.55s
+                               ETA: 20338.4s
+################################################################################
+                      [1m Learning iteration 9/6000 
+                       Computation: 17545 steps/s (collection: 0.738s, learning 0.663s)
+               Value function loss: 0.38553
+          cost value function loss: 610351070014094592.00000
+                    Surrogate loss: -0.00342
+                         viol loss: 0.27018
+             Mean action noise std: 1.07
+                       Mean reward: 0.02
+               Mean episode length: 29.55
+      Mean episode rew_action_rate: -0.00847
+Mean episode rew_action_smoothness: -0.02458
+       Mean episode rew_ang_vel_xy: -65305093699796992.00000
+      Mean episode rew_base_height: -0.10780
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -1915697013719040.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -94.74312
+        Mean episode rew_foot_slip: -0.00276
+        Mean episode rew_lin_vel_z: -7768733384704.00000
+        Mean episode rew_low_speed: -0.00527
+Mean episode rew_orientation_eular: 0.00074
+           Mean episode rew_powers: -973.30341
+   Mean episode rew_track_vel_hard: -105171.46875
+ Mean episode rew_tracking_ang_vel: 0.00374
+ Mean episode rew_tracking_lin_vel: 0.01046
+ Mean episode rew_vel_mismatch_exp: 0.00704
+  Mean episode cost_acc_smoothness: 16897632.00000
+     Mean episode cost_base_height: 0.08293
+       Mean episode cost_collision: 0.00172
+  Mean episode cost_dof_vel_limits: 0.00191
+   Mean episode cost_feet_air_time: 0.00150
+         Mean episode cost_hip_pos: 0.00270
+       Mean episode cost_pos_limit: 0.00564
+     Mean episode cost_stand_still: 0.00881
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 245760
+                    Iteration time: 1.40s
+                        Total time: 31.95s
+                               ETA: 19140.7s
+################################################################################
+                      [1m Learning iteration 10/6000 
+                       Computation: 17498 steps/s (collection: 0.749s, learning 0.655s)
+               Value function loss: 2.74959
+          cost value function loss: inf
+                    Surrogate loss: 0.01140
+                         viol loss: 0.32954
+             Mean action noise std: 1.05
+                       Mean reward: 0.01
+               Mean episode length: 27.02
+      Mean episode rew_action_rate: -0.00764
+Mean episode rew_action_smoothness: -0.02206
+       Mean episode rew_ang_vel_xy: -6518229652500060294873088.00000
+      Mean episode rew_base_height: -2039706494588420096.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -1518408286091135080726528.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1675921.37500
+        Mean episode rew_foot_slip: -6.23726
+        Mean episode rew_lin_vel_z: -199815996497550318239744.00000
+        Mean episode rew_low_speed: -0.00451
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -19141624.00000
+   Mean episode rew_track_vel_hard: -490224128.00000
+ Mean episode rew_tracking_ang_vel: 0.00333
+ Mean episode rew_tracking_lin_vel: 0.00870
+ Mean episode rew_vel_mismatch_exp: 0.00619
+  Mean episode cost_acc_smoothness: 332319817728.00000
+     Mean episode cost_base_height: 1569005154420654080.00000
+       Mean episode cost_collision: 0.00141
+  Mean episode cost_dof_vel_limits: 0.00199
+   Mean episode cost_feet_air_time: 0.00135
+         Mean episode cost_hip_pos: 0.00253
+       Mean episode cost_pos_limit: 0.00477
+     Mean episode cost_stand_still: 0.00835
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 270336
+                    Iteration time: 1.40s
+                        Total time: 33.35s
+                               ETA: 18162.5s
+################################################################################
+                      [1m Learning iteration 11/6000 
+                       Computation: 17867 steps/s (collection: 0.716s, learning 0.659s)
+               Value function loss: 1.04978
+          cost value function loss: inf
+                    Surrogate loss: -0.00266
+                         viol loss: 0.36003
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 24.34
+      Mean episode rew_action_rate: -0.00773
+Mean episode rew_action_smoothness: -0.02229
+       Mean episode rew_ang_vel_xy: -6466219931282563923968.00000
+      Mean episode rew_base_height: -18214728669069312.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -1521296813827337224192.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -42910.64062
+        Mean episode rew_foot_slip: -0.00360
+        Mean episode rew_lin_vel_z: -4707548039206666240.00000
+        Mean episode rew_low_speed: -0.00457
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -690242.31250
+   Mean episode rew_track_vel_hard: -44918216.00000
+ Mean episode rew_tracking_ang_vel: 0.00352
+ Mean episode rew_tracking_lin_vel: 0.00922
+ Mean episode rew_vel_mismatch_exp: 0.00629
+  Mean episode cost_acc_smoothness: 11983374336.00000
+     Mean episode cost_base_height: 14011329002078208.00000
+       Mean episode cost_collision: 0.00181
+  Mean episode cost_dof_vel_limits: 0.00185
+   Mean episode cost_feet_air_time: 0.00133
+         Mean episode cost_hip_pos: 0.00252
+       Mean episode cost_pos_limit: 0.00505
+     Mean episode cost_stand_still: 0.00950
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 294912
+                    Iteration time: 1.38s
+                        Total time: 34.73s
+                               ETA: 17332.7s
+################################################################################
+                      [1m Learning iteration 12/6000 
+                       Computation: 18068 steps/s (collection: 0.699s, learning 0.661s)
+               Value function loss: 0.13238
+          cost value function loss: 87808196031073488.00000
+                    Surrogate loss: -0.00060
+                         viol loss: 0.36746
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 29.15
+      Mean episode rew_action_rate: -0.00785
+Mean episode rew_action_smoothness: -0.02265
+       Mean episode rew_ang_vel_xy: -6740757708800.00000
+      Mean episode rew_base_height: -3484540.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -6264432099328.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -99.35714
+        Mean episode rew_foot_slip: -0.01404
+        Mean episode rew_lin_vel_z: -113524662272.00000
+        Mean episode rew_low_speed: -0.00432
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -68.52802
+   Mean episode rew_track_vel_hard: -1507.00513
+ Mean episode rew_tracking_ang_vel: 0.00346
+ Mean episode rew_tracking_lin_vel: 0.00953
+ Mean episode rew_vel_mismatch_exp: 0.00641
+  Mean episode cost_acc_smoothness: 1189722.50000
+     Mean episode cost_base_height: 2680415.25000
+       Mean episode cost_collision: 0.00170
+  Mean episode cost_dof_vel_limits: 0.00193
+   Mean episode cost_feet_air_time: 0.00135
+         Mean episode cost_hip_pos: 0.00254
+       Mean episode cost_pos_limit: 0.00528
+     Mean episode cost_stand_still: 0.00995
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 319488
+                    Iteration time: 1.36s
+                        Total time: 36.09s
+                               ETA: 16623.2s
+################################################################################
+                      [1m Learning iteration 13/6000 
+                       Computation: 18658 steps/s (collection: 0.660s, learning 0.657s)
+               Value function loss: 0.11140
+          cost value function loss: 1080398635531358.37500
+                    Surrogate loss: -0.00399
+                         viol loss: 0.33224
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 30.32
+      Mean episode rew_action_rate: -0.00784
+Mean episode rew_action_smoothness: -0.02263
+       Mean episode rew_ang_vel_xy: -63018595516416.00000
+      Mean episode rew_base_height: -235.58464
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -1547771969536.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -17.58872
+        Mean episode rew_foot_slip: -0.00266
+        Mean episode rew_lin_vel_z: -1517292416.00000
+        Mean episode rew_low_speed: -0.00483
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -35.56381
+   Mean episode rew_track_vel_hard: -74.79860
+ Mean episode rew_tracking_ang_vel: 0.00328
+ Mean episode rew_tracking_lin_vel: 0.00913
+ Mean episode rew_vel_mismatch_exp: 0.00637
+  Mean episode cost_acc_smoothness: 617773.37500
+     Mean episode cost_base_height: 181.21896
+       Mean episode cost_collision: 0.00170
+  Mean episode cost_dof_vel_limits: 0.00205
+   Mean episode cost_feet_air_time: 0.00139
+         Mean episode cost_hip_pos: 0.00245
+       Mean episode cost_pos_limit: 0.00540
+     Mean episode cost_stand_still: 0.00852
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 344064
+                    Iteration time: 1.32s
+                        Total time: 37.41s
+                               ETA: 15996.5s
+################################################################################
+                      [1m Learning iteration 14/6000 
+                       Computation: 17936 steps/s (collection: 0.712s, learning 0.658s)
+               Value function loss: 165.07852
+          cost value function loss: 165998087861612577830574909030400.00000
+                    Surrogate loss: -0.00006
+                         viol loss: 0.40771
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.37
+      Mean episode rew_action_rate: -0.00816
+Mean episode rew_action_smoothness: -0.02356
+       Mean episode rew_ang_vel_xy: -18977456346204471296.00000
+      Mean episode rew_base_height: -304515194552320.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -254969152979075072.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -3072.12671
+        Mean episode rew_foot_slip: -0.33318
+        Mean episode rew_lin_vel_z: -1050622255563800576.00000
+        Mean episode rew_low_speed: -0.00514
+Mean episode rew_orientation_eular: 0.00071
+           Mean episode rew_powers: -12351.12500
+   Mean episode rew_track_vel_hard: -5164586.00000
+ Mean episode rew_tracking_ang_vel: 0.00368
+ Mean episode rew_tracking_lin_vel: 0.00961
+ Mean episode rew_vel_mismatch_exp: 0.00667
+  Mean episode cost_acc_smoothness: 214429280.00000
+     Mean episode cost_base_height: 234242483159040.00000
+       Mean episode cost_collision: 0.00185
+  Mean episode cost_dof_vel_limits: 0.00198
+   Mean episode cost_feet_air_time: 0.00145
+         Mean episode cost_hip_pos: 0.00257
+       Mean episode cost_pos_limit: 0.00535
+     Mean episode cost_stand_still: 0.00877
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 368640
+                    Iteration time: 1.37s
+                        Total time: 38.78s
+                               ETA: 15474.4s
+################################################################################
+                      [1m Learning iteration 15/6000 
+                       Computation: 17275 steps/s (collection: 0.737s, learning 0.686s)
+               Value function loss: 811.05202
+          cost value function loss: 872679715635.19995
+                    Surrogate loss: 0.00001
+                         viol loss: 0.28634
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.24
+      Mean episode rew_action_rate: -0.00833
+Mean episode rew_action_smoothness: -0.02405
+       Mean episode rew_ang_vel_xy: -825008832.00000
+      Mean episode rew_base_height: -28.72181
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -281547904.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1.95537
+        Mean episode rew_foot_slip: -0.00328
+        Mean episode rew_lin_vel_z: -28023868.00000
+        Mean episode rew_low_speed: -0.00505
+Mean episode rew_orientation_eular: 0.00072
+           Mean episode rew_powers: -0.57759
+   Mean episode rew_track_vel_hard: -6.23736
+ Mean episode rew_tracking_ang_vel: 0.00370
+ Mean episode rew_tracking_lin_vel: 0.00977
+ Mean episode rew_vel_mismatch_exp: 0.00679
+  Mean episode cost_acc_smoothness: 10031.67676
+     Mean episode cost_base_height: 22.09370
+       Mean episode cost_collision: 0.00162
+  Mean episode cost_dof_vel_limits: 0.00205
+   Mean episode cost_feet_air_time: 0.00147
+         Mean episode cost_hip_pos: 0.00267
+       Mean episode cost_pos_limit: 0.00569
+     Mean episode cost_stand_still: 0.00799
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 393216
+                    Iteration time: 1.42s
+                        Total time: 40.20s
+                               ETA: 15036.9s
+################################################################################
+                      [1m Learning iteration 16/6000 
+                       Computation: 18347 steps/s (collection: 0.682s, learning 0.658s)
+               Value function loss: 0.30433
+          cost value function loss: inf
+                    Surrogate loss: -0.00001
+                         viol loss: 0.36782
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.04
+      Mean episode rew_action_rate: -0.00790
+Mean episode rew_action_smoothness: -0.02275
+       Mean episode rew_ang_vel_xy: -4100187781222541815709696.00000
+      Mean episode rew_base_height: -92341444676681728.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -707672803187689718284288.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1141516.87500
+        Mean episode rew_foot_slip: -0.00253
+        Mean episode rew_lin_vel_z: -12160580307329073807360.00000
+        Mean episode rew_low_speed: -0.00457
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -21284332.00000
+   Mean episode rew_track_vel_hard: -69382832.00000
+ Mean episode rew_tracking_ang_vel: 0.00344
+ Mean episode rew_tracking_lin_vel: 0.00901
+ Mean episode rew_vel_mismatch_exp: 0.00641
+  Mean episode cost_acc_smoothness: 369519624192.00000
+     Mean episode cost_base_height: 71031882833199104.00000
+       Mean episode cost_collision: 0.00172
+  Mean episode cost_dof_vel_limits: 0.00203
+   Mean episode cost_feet_air_time: 0.00138
+         Mean episode cost_hip_pos: 0.00261
+       Mean episode cost_pos_limit: 0.00542
+     Mean episode cost_stand_still: 0.00863
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 417792
+                    Iteration time: 1.34s
+                        Total time: 41.54s
+                               ETA: 14621.6s
+################################################################################
+                      [1m Learning iteration 17/6000 
+                       Computation: 17831 steps/s (collection: 0.726s, learning 0.652s)
+               Value function loss: 229.21052
+          cost value function loss: 49619242073246010441728.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.40531
+             Mean action noise std: 1.06
+                       Mean reward: 0.04
+               Mean episode length: 32.62
+      Mean episode rew_action_rate: -0.00790
+Mean episode rew_action_smoothness: -0.02275
+       Mean episode rew_ang_vel_xy: -9642937511239772798976.00000
+      Mean episode rew_base_height: -166174.96875
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -450439162758621560832.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -45821.81250
+        Mean episode rew_foot_slip: -0.00479
+        Mean episode rew_lin_vel_z: -1215666510035419136.00000
+        Mean episode rew_low_speed: -0.00470
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -359185.25000
+   Mean episode rew_track_vel_hard: -54434864.00000
+ Mean episode rew_tracking_ang_vel: 0.00346
+ Mean episode rew_tracking_lin_vel: 0.00984
+ Mean episode rew_vel_mismatch_exp: 0.00646
+  Mean episode cost_acc_smoothness: 6235855872.00000
+     Mean episode cost_base_height: 127826.89844
+       Mean episode cost_collision: 0.00168
+  Mean episode cost_dof_vel_limits: 0.00201
+   Mean episode cost_feet_air_time: 0.00134
+         Mean episode cost_hip_pos: 0.00250
+       Mean episode cost_pos_limit: 0.00532
+     Mean episode cost_stand_still: 0.01063
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 442368
+                    Iteration time: 1.38s
+                        Total time: 42.92s
+                               ETA: 14265.1s
+################################################################################
+                      [1m Learning iteration 18/6000 
+                       Computation: 17660 steps/s (collection: 0.735s, learning 0.657s)
+               Value function loss: 0.28961
+          cost value function loss: 812633543150655633972636944433152.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.41053
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 28.61
+      Mean episode rew_action_rate: -0.00817
+Mean episode rew_action_smoothness: -0.02357
+       Mean episode rew_ang_vel_xy: -370313847651294859231232.00000
+      Mean episode rew_base_height: -371851624710144.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -2518754340772331388928.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -189321.50000
+        Mean episode rew_foot_slip: -2.72122
+        Mean episode rew_lin_vel_z: -30853903761394368512.00000
+        Mean episode rew_low_speed: -0.00504
+Mean episode rew_orientation_eular: 0.00066
+           Mean episode rew_powers: -1210020.37500
+   Mean episode rew_track_vel_hard: -52823180.00000
+ Mean episode rew_tracking_ang_vel: 0.00359
+ Mean episode rew_tracking_lin_vel: 0.00911
+ Mean episode rew_vel_mismatch_exp: 0.00666
+  Mean episode cost_acc_smoothness: 21036158976.00000
+     Mean episode cost_base_height: 286039721639936.00000
+       Mean episode cost_collision: 0.00250
+  Mean episode cost_dof_vel_limits: 0.00202
+   Mean episode cost_feet_air_time: 0.00142
+         Mean episode cost_hip_pos: 0.00255
+       Mean episode cost_pos_limit: 0.00589
+     Mean episode cost_stand_still: 0.00957
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 466944
+                    Iteration time: 1.39s
+                        Total time: 44.31s
+                               ETA: 13950.1s
+################################################################################
+                      [1m Learning iteration 19/6000 
+                       Computation: 17672 steps/s (collection: 0.736s, learning 0.655s)
+               Value function loss: 5.06279
+          cost value function loss: 17181456913974880632832.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.38865
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 31.08
+      Mean episode rew_action_rate: -0.00778
+Mean episode rew_action_smoothness: -0.02248
+       Mean episode rew_ang_vel_xy: -52624324151312646144.00000
+      Mean episode rew_base_height: -10005464.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -17164844357606440960.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -4813.08301
+        Mean episode rew_foot_slip: -0.00585
+        Mean episode rew_lin_vel_z: -76300231452393472.00000
+        Mean episode rew_low_speed: -0.00450
+Mean episode rew_orientation_eular: 0.00068
+           Mean episode rew_powers: -88515.93750
+   Mean episode rew_track_vel_hard: -2239154.00000
+ Mean episode rew_tracking_ang_vel: 0.00333
+ Mean episode rew_tracking_lin_vel: 0.00906
+ Mean episode rew_vel_mismatch_exp: 0.00627
+  Mean episode cost_acc_smoothness: 1536866560.00000
+     Mean episode cost_base_height: 7696510.00000
+       Mean episode cost_collision: 0.00176
+  Mean episode cost_dof_vel_limits: 0.00187
+   Mean episode cost_feet_air_time: 0.00137
+         Mean episode cost_hip_pos: 0.00260
+       Mean episode cost_pos_limit: 0.00539
+     Mean episode cost_stand_still: 0.00817
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 491520
+                    Iteration time: 1.39s
+                        Total time: 45.70s
+                               ETA: 13666.3s
+################################################################################
+                      [1m Learning iteration 20/6000 
+                       Computation: 17746 steps/s (collection: 0.732s, learning 0.653s)
+               Value function loss: 0.54493
+          cost value function loss: 632440625561.59998
+                    Surrogate loss: -0.00000
+                         viol loss: 0.29407
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 34.34
+      Mean episode rew_action_rate: -0.00826
+Mean episode rew_action_smoothness: -0.02386
+       Mean episode rew_ang_vel_xy: -6730990.00000
+      Mean episode rew_base_height: -0.00073
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -2393581.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.11349
+        Mean episode rew_foot_slip: -0.00275
+        Mean episode rew_lin_vel_z: -1334.33936
+        Mean episode rew_low_speed: -0.00458
+Mean episode rew_orientation_eular: 0.00072
+           Mean episode rew_powers: -0.03970
+   Mean episode rew_track_vel_hard: -0.30940
+ Mean episode rew_tracking_ang_vel: 0.00358
+ Mean episode rew_tracking_lin_vel: 0.01024
+ Mean episode rew_vel_mismatch_exp: 0.00669
+  Mean episode cost_acc_smoothness: 717.27356
+     Mean episode cost_base_height: 0.00056
+       Mean episode cost_collision: 0.00162
+  Mean episode cost_dof_vel_limits: 0.00202
+   Mean episode cost_feet_air_time: 0.00139
+         Mean episode cost_hip_pos: 0.00264
+       Mean episode cost_pos_limit: 0.00508
+     Mean episode cost_stand_still: 0.01131
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 516096
+                    Iteration time: 1.38s
+                        Total time: 47.08s
+                               ETA: 13407.7s
+################################################################################
+                      [1m Learning iteration 21/6000 
+                       Computation: 18417 steps/s (collection: 0.680s, learning 0.655s)
+               Value function loss: 0.27851
+          cost value function loss: 4335511290668646.50000
+                    Surrogate loss: -0.00001
+                         viol loss: 0.33497
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 33.38
+      Mean episode rew_action_rate: -0.00826
+Mean episode rew_action_smoothness: -0.02389
+       Mean episode rew_ang_vel_xy: -3982403567616.00000
+      Mean episode rew_base_height: -0.00574
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -1653507883008.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -100.56887
+        Mean episode rew_foot_slip: -0.00287
+        Mean episode rew_lin_vel_z: -187178418176.00000
+        Mean episode rew_low_speed: -0.00484
+Mean episode rew_orientation_eular: 0.00073
+           Mean episode rew_powers: -5.01521
+   Mean episode rew_track_vel_hard: -281.37833
+ Mean episode rew_tracking_ang_vel: 0.00361
+ Mean episode rew_tracking_lin_vel: 0.00991
+ Mean episode rew_vel_mismatch_exp: 0.00672
+  Mean episode cost_acc_smoothness: 679111.56250
+     Mean episode cost_base_height: 0.00441
+       Mean episode cost_collision: 0.00168
+  Mean episode cost_dof_vel_limits: 0.00218
+   Mean episode cost_feet_air_time: 0.00144
+         Mean episode cost_hip_pos: 0.00253
+       Mean episode cost_pos_limit: 0.00529
+     Mean episode cost_stand_still: 0.00931
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 540672
+                    Iteration time: 1.33s
+                        Total time: 48.42s
+                               ETA: 13158.8s
+################################################################################
+                      [1m Learning iteration 22/6000 
+                       Computation: 18052 steps/s (collection: 0.701s, learning 0.660s)
+               Value function loss: 0.28467
+          cost value function loss: inf
+                    Surrogate loss: -0.00000
+                         viol loss: 0.35763
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.88
+      Mean episode rew_action_rate: -0.00796
+Mean episode rew_action_smoothness: -0.02294
+       Mean episode rew_ang_vel_xy: -1118173981681869914112.00000
+      Mean episode rew_base_height: -101834884600706367488.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -136417601659076608.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -3950.45776
+        Mean episode rew_foot_slip: -0.23065
+        Mean episode rew_lin_vel_z: -173506780200960.00000
+        Mean episode rew_low_speed: -0.00448
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -9505.17285
+   Mean episode rew_track_vel_hard: -2393668.00000
+ Mean episode rew_tracking_ang_vel: 0.00350
+ Mean episode rew_tracking_lin_vel: 0.00947
+ Mean episode rew_vel_mismatch_exp: 0.00646
+  Mean episode cost_acc_smoothness: 165020608.00000
+     Mean episode cost_base_height: 78334529999040675840.00000
+       Mean episode cost_collision: 0.00169
+  Mean episode cost_dof_vel_limits: 0.00198
+   Mean episode cost_feet_air_time: 0.00138
+         Mean episode cost_hip_pos: 0.00266
+       Mean episode cost_pos_limit: 0.00540
+     Mean episode cost_stand_still: 0.00943
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 565248
+                    Iteration time: 1.36s
+                        Total time: 49.78s
+                               ETA: 12938.4s
+################################################################################
+                      [1m Learning iteration 23/6000 
+                       Computation: 16632 steps/s (collection: 0.820s, learning 0.657s)
+               Value function loss: 0.27534
+          cost value function loss: 226058129396781706349903872.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.39955
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 27.88
+      Mean episode rew_action_rate: -0.00804
+Mean episode rew_action_smoothness: -0.02321
+       Mean episode rew_ang_vel_xy: -78993228544877363780911104.00000
+      Mean episode rew_base_height: -2053690.37500
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -174053316958763981209600.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -2977768.50000
+        Mean episode rew_foot_slip: -0.00257
+        Mean episode rew_lin_vel_z: -536021594243124428800.00000
+        Mean episode rew_low_speed: -0.00492
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -10541448.00000
+   Mean episode rew_track_vel_hard: -357959648.00000
+ Mean episode rew_tracking_ang_vel: 0.00351
+ Mean episode rew_tracking_lin_vel: 0.00915
+ Mean episode rew_vel_mismatch_exp: 0.00650
+  Mean episode cost_acc_smoothness: 183011229696.00000
+     Mean episode cost_base_height: 1579761.87500
+       Mean episode cost_collision: 0.00168
+  Mean episode cost_dof_vel_limits: 0.00196
+   Mean episode cost_feet_air_time: 0.00138
+         Mean episode cost_hip_pos: 0.00269
+       Mean episode cost_pos_limit: 0.00576
+     Mean episode cost_stand_still: 0.00864
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 589824
+                    Iteration time: 1.48s
+                        Total time: 51.26s
+                               ETA: 12765.2s
+################################################################################
+                      [1m Learning iteration 24/6000 
+                       Computation: 17896 steps/s (collection: 0.719s, learning 0.655s)
+               Value function loss: 0.26545
+          cost value function loss: 1021327476949106297646823336050688.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.41431
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 32.78
+      Mean episode rew_action_rate: -0.00819
+Mean episode rew_action_smoothness: -0.02368
+       Mean episode rew_ang_vel_xy: -732799061611683774464.00000
+      Mean episode rew_base_height: -443547413118976.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -267296571960344969216.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -29844.01562
+        Mean episode rew_foot_slip: -0.63519
+        Mean episode rew_lin_vel_z: -88897301812084736.00000
+        Mean episode rew_low_speed: -0.00468
+Mean episode rew_orientation_eular: 0.00072
+           Mean episode rew_powers: -427519.12500
+   Mean episode rew_track_vel_hard: -6683481.00000
+ Mean episode rew_tracking_ang_vel: 0.00362
+ Mean episode rew_tracking_lin_vel: 0.01013
+ Mean episode rew_vel_mismatch_exp: 0.00671
+  Mean episode cost_acc_smoothness: 7422206976.00000
+     Mean episode cost_base_height: 341190322946048.00000
+       Mean episode cost_collision: 0.00170
+  Mean episode cost_dof_vel_limits: 0.00181
+   Mean episode cost_feet_air_time: 0.00139
+         Mean episode cost_hip_pos: 0.00270
+       Mean episode cost_pos_limit: 0.00581
+     Mean episode cost_stand_still: 0.01067
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 614400
+                    Iteration time: 1.37s
+                        Total time: 52.63s
+                               ETA: 12580.8s
+################################################################################
+                      [1m Learning iteration 25/6000 
+                       Computation: 17366 steps/s (collection: 0.753s, learning 0.662s)
+               Value function loss: 0.28483
+          cost value function loss: 5746249600653486080.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.38187
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 31.87
+      Mean episode rew_action_rate: -0.00824
+Mean episode rew_action_smoothness: -0.02380
+       Mean episode rew_ang_vel_xy: -13529582141440.00000
+      Mean episode rew_base_height: -42561508.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -208340238336.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -52.53463
+        Mean episode rew_foot_slip: -0.00960
+        Mean episode rew_lin_vel_z: -408083038208.00000
+        Mean episode rew_low_speed: -0.00497
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -9.58693
+   Mean episode rew_track_vel_hard: -960.91010
+ Mean episode rew_tracking_ang_vel: 0.00367
+ Mean episode rew_tracking_lin_vel: 0.00937
+ Mean episode rew_vel_mismatch_exp: 0.00673
+  Mean episode cost_acc_smoothness: 166448.85938
+     Mean episode cost_base_height: 32739622.00000
+       Mean episode cost_collision: 0.00187
+  Mean episode cost_dof_vel_limits: 0.00213
+   Mean episode cost_feet_air_time: 0.00144
+         Mean episode cost_hip_pos: 0.00282
+       Mean episode cost_pos_limit: 0.00618
+     Mean episode cost_stand_still: 0.00877
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 638976
+                    Iteration time: 1.42s
+                        Total time: 54.05s
+                               ETA: 12420.1s
+################################################################################
+                      [1m Learning iteration 26/6000 
+                       Computation: 18026 steps/s (collection: 0.711s, learning 0.653s)
+               Value function loss: 0.28048
+          cost value function loss: 372956663675862788920573952.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.41645
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 29.15
+      Mean episode rew_action_rate: -0.00789
+Mean episode rew_action_smoothness: -0.02277
+       Mean episode rew_ang_vel_xy: -244812127051468982685007872.00000
+      Mean episode rew_base_height: -143165.78125
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -380607347017206902816768.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -3984267.50000
+        Mean episode rew_foot_slip: -0.00253
+        Mean episode rew_lin_vel_z: -2054905111988888666112.00000
+        Mean episode rew_low_speed: -0.00441
+Mean episode rew_orientation_eular: 0.00068
+           Mean episode rew_powers: -19733168.00000
+   Mean episode rew_track_vel_hard: -173418144.00000
+ Mean episode rew_tracking_ang_vel: 0.00314
+ Mean episode rew_tracking_lin_vel: 0.00979
+ Mean episode rew_vel_mismatch_exp: 0.00639
+  Mean episode cost_acc_smoothness: 342589767680.00000
+     Mean episode cost_base_height: 110127.53125
+       Mean episode cost_collision: 0.00183
+  Mean episode cost_dof_vel_limits: 0.00203
+   Mean episode cost_feet_air_time: 0.00136
+         Mean episode cost_hip_pos: 0.00248
+       Mean episode cost_pos_limit: 0.00559
+     Mean episode cost_stand_still: 0.00891
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 663552
+                    Iteration time: 1.36s
+                        Total time: 55.41s
+                               ETA: 12259.7s
+################################################################################
+                      [1m Learning iteration 27/6000 
+                       Computation: 18422 steps/s (collection: 0.672s, learning 0.662s)
+               Value function loss: 0.28124
+          cost value function loss: inf
+                    Surrogate loss: 0.00000
+                         viol loss: 0.40063
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 29.53
+      Mean episode rew_action_rate: -0.00806
+Mean episode rew_action_smoothness: -0.02327
+       Mean episode rew_ang_vel_xy: -233220102972032155648.00000
+      Mean episode rew_base_height: -165240535988874248192.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -7535803107637198848.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -16423.64648
+        Mean episode rew_foot_slip: -0.76009
+        Mean episode rew_lin_vel_z: -105979163828119666688.00000
+        Mean episode rew_low_speed: -0.00506
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -85199.25000
+   Mean episode rew_track_vel_hard: -7413107.50000
+ Mean episode rew_tracking_ang_vel: 0.00336
+ Mean episode rew_tracking_lin_vel: 0.00990
+ Mean episode rew_vel_mismatch_exp: 0.00651
+  Mean episode cost_acc_smoothness: 1479153664.00000
+     Mean episode cost_base_height: 127108118139277148160.00000
+       Mean episode cost_collision: 0.00203
+  Mean episode cost_dof_vel_limits: 0.00219
+   Mean episode cost_feet_air_time: 0.00135
+         Mean episode cost_hip_pos: 0.00270
+       Mean episode cost_pos_limit: 0.00538
+     Mean episode cost_stand_still: 0.01003
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 688128
+                    Iteration time: 1.33s
+                        Total time: 56.74s
+                               ETA: 12104.5s
+################################################################################
+                      [1m Learning iteration 28/6000 
+                       Computation: 18274 steps/s (collection: 0.685s, learning 0.660s)
+               Value function loss: 0.27871
+          cost value function loss: 395907084778047799296.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.36130
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 29.01
+      Mean episode rew_action_rate: -0.00812
+Mean episode rew_action_smoothness: -0.02348
+       Mean episode rew_ang_vel_xy: -36166640592714989568.00000
+      Mean episode rew_base_height: -10.17300
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -256661748050821120.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -4676.09375
+        Mean episode rew_foot_slip: -0.00558
+        Mean episode rew_lin_vel_z: -450706318295040.00000
+        Mean episode rew_low_speed: -0.00456
+Mean episode rew_orientation_eular: 0.00068
+           Mean episode rew_powers: -13759.51855
+   Mean episode rew_track_vel_hard: -3579900.00000
+ Mean episode rew_tracking_ang_vel: 0.00360
+ Mean episode rew_tracking_lin_vel: 0.01015
+ Mean episode rew_vel_mismatch_exp: 0.00667
+  Mean episode cost_acc_smoothness: 238880560.00000
+     Mean episode cost_base_height: 7.82539
+       Mean episode cost_collision: 0.00212
+  Mean episode cost_dof_vel_limits: 0.00209
+   Mean episode cost_feet_air_time: 0.00137
+         Mean episode cost_hip_pos: 0.00259
+       Mean episode cost_pos_limit: 0.00599
+     Mean episode cost_stand_still: 0.01070
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 712704
+                    Iteration time: 1.34s
+                        Total time: 58.09s
+                               ETA: 11962.1s
+################################################################################
+                      [1m Learning iteration 29/6000 
+                       Computation: 17262 steps/s (collection: 0.772s, learning 0.652s)
+               Value function loss: 0.27695
+          cost value function loss: 3330831731983346760155136.00000
+                    Surrogate loss: 0.00000
+                         viol loss: 0.46612
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.72
+      Mean episode rew_action_rate: -0.00807
+Mean episode rew_action_smoothness: -0.02331
+       Mean episode rew_ang_vel_xy: -1402101852936772509499392.00000
+      Mean episode rew_base_height: -3966592768.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -7810286588973990019072.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -668552.06250
+        Mean episode rew_foot_slip: -5.05825
+        Mean episode rew_lin_vel_z: -459108639320309760.00000
+        Mean episode rew_low_speed: -0.00513
+Mean episode rew_orientation_eular: 0.00071
+           Mean episode rew_powers: -1402647.25000
+   Mean episode rew_track_vel_hard: -902075264.00000
+ Mean episode rew_tracking_ang_vel: 0.00317
+ Mean episode rew_tracking_lin_vel: 0.00889
+ Mean episode rew_vel_mismatch_exp: 0.00656
+  Mean episode cost_acc_smoothness: 24351514624.00000
+     Mean episode cost_base_height: 3051225088.00000
+       Mean episode cost_collision: 0.00212
+  Mean episode cost_dof_vel_limits: 0.00209
+   Mean episode cost_feet_air_time: 0.00137
+         Mean episode cost_hip_pos: 0.00269
+       Mean episode cost_pos_limit: 0.00548
+     Mean episode cost_stand_still: 0.01017
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 737280
+                    Iteration time: 1.42s
+                        Total time: 59.51s
+                               ETA: 11844.8s
+################################################################################
+                      [1m Learning iteration 30/6000 
+                       Computation: 18209 steps/s (collection: 0.689s, learning 0.661s)
+               Value function loss: 0.27953
+          cost value function loss: 4223877932646.39990
+                    Surrogate loss: -0.00000
+                         viol loss: 0.37610
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 31.37
+      Mean episode rew_action_rate: -0.00803
+Mean episode rew_action_smoothness: -0.02315
+       Mean episode rew_ang_vel_xy: -2165504.50000
+      Mean episode rew_base_height: -0.00003
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -853409.18750
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.07401
+        Mean episode rew_foot_slip: -0.00259
+        Mean episode rew_lin_vel_z: -26885.75586
+        Mean episode rew_low_speed: -0.00454
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -0.01919
+   Mean episode rew_track_vel_hard: -0.22056
+ Mean episode rew_tracking_ang_vel: 0.00339
+ Mean episode rew_tracking_lin_vel: 0.01018
+ Mean episode rew_vel_mismatch_exp: 0.00652
+  Mean episode cost_acc_smoothness: 333.06570
+     Mean episode cost_base_height: 0.00002
+       Mean episode cost_collision: 0.00181
+  Mean episode cost_dof_vel_limits: 0.00194
+   Mean episode cost_feet_air_time: 0.00134
+         Mean episode cost_hip_pos: 0.00258
+       Mean episode cost_pos_limit: 0.00551
+     Mean episode cost_stand_still: 0.01054
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 761856
+                    Iteration time: 1.35s
+                        Total time: 60.86s
+                               ETA: 11720.7s
+################################################################################
+                      [1m Learning iteration 31/6000 
+                       Computation: 17714 steps/s (collection: 0.732s, learning 0.655s)
+               Value function loss: 0.27956
+          cost value function loss: 4353012754022.39990
+                    Surrogate loss: -0.00000
+                         viol loss: 0.37856
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 27.73
+      Mean episode rew_action_rate: -0.00830
+Mean episode rew_action_smoothness: -0.02399
+       Mean episode rew_ang_vel_xy: -135.71707
+      Mean episode rew_base_height: -0.00003
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -75.90884
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.00105
+        Mean episode rew_foot_slip: -0.00269
+        Mean episode rew_lin_vel_z: -9.80955
+        Mean episode rew_low_speed: -0.00489
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -0.00034
+   Mean episode rew_track_vel_hard: -0.00552
+ Mean episode rew_tracking_ang_vel: 0.00346
+ Mean episode rew_tracking_lin_vel: 0.00962
+ Mean episode rew_vel_mismatch_exp: 0.00675
+  Mean episode cost_acc_smoothness: 5.76655
+     Mean episode cost_base_height: 0.00003
+       Mean episode cost_collision: 0.00211
+  Mean episode cost_dof_vel_limits: 0.00215
+   Mean episode cost_feet_air_time: 0.00145
+         Mean episode cost_hip_pos: 0.00273
+       Mean episode cost_pos_limit: 0.00563
+     Mean episode cost_stand_still: 0.00833
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 786432
+                    Iteration time: 1.39s
+                        Total time: 62.25s
+                               ETA: 11611.3s
+################################################################################
+                      [1m Learning iteration 32/6000 
+                       Computation: 17198 steps/s (collection: 0.773s, learning 0.656s)
+               Value function loss: 0.27225
+          cost value function loss: 45657929184123717964207927328768.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.48961
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 30.37
+      Mean episode rew_action_rate: -0.00785
+Mean episode rew_action_smoothness: -0.02259
+       Mean episode rew_ang_vel_xy: -1895475011167694356480.00000
+      Mean episode rew_base_height: -98860911296512.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -412643406573356449792.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -51432.43359
+        Mean episode rew_foot_slip: -0.90363
+        Mean episode rew_lin_vel_z: -1240718332718481408.00000
+        Mean episode rew_low_speed: -0.00485
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -574770.25000
+   Mean episode rew_track_vel_hard: -6914818.00000
+ Mean episode rew_tracking_ang_vel: 0.00333
+ Mean episode rew_tracking_lin_vel: 0.00897
+ Mean episode rew_vel_mismatch_exp: 0.00636
+  Mean episode cost_acc_smoothness: 9978650624.00000
+     Mean episode cost_base_height: 76046867103744.00000
+       Mean episode cost_collision: 0.00179
+  Mean episode cost_dof_vel_limits: 0.00194
+   Mean episode cost_feet_air_time: 0.00142
+         Mean episode cost_hip_pos: 0.00251
+       Mean episode cost_pos_limit: 0.00567
+     Mean episode cost_stand_still: 0.00709
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 811008
+                    Iteration time: 1.43s
+                        Total time: 63.68s
+                               ETA: 11516.0s
+################################################################################
+                      [1m Learning iteration 33/6000 
+                       Computation: 18728 steps/s (collection: 0.654s, learning 0.658s)
+               Value function loss: 0.25532
+          cost value function loss: 1388659538881978587796127925403648.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.46734
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 28.27
+      Mean episode rew_action_rate: -0.00780
+Mean episode rew_action_smoothness: -0.02248
+       Mean episode rew_ang_vel_xy: -683277619747094528.00000
+      Mean episode rew_base_height: -737858470019072.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -15811011567157248.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -677.50146
+        Mean episode rew_foot_slip: -0.01305
+        Mean episode rew_lin_vel_z: -4257919533056.00000
+        Mean episode rew_low_speed: -0.00460
+Mean episode rew_orientation_eular: 0.00068
+           Mean episode rew_powers: -3428.82471
+   Mean episode rew_track_vel_hard: -936943.43750
+ Mean episode rew_tracking_ang_vel: 0.00340
+ Mean episode rew_tracking_lin_vel: 0.00928
+ Mean episode rew_vel_mismatch_exp: 0.00636
+  Mean episode cost_acc_smoothness: 59528204.00000
+     Mean episode cost_base_height: 567583484936192.00000
+       Mean episode cost_collision: 0.00190
+  Mean episode cost_dof_vel_limits: 0.00206
+   Mean episode cost_feet_air_time: 0.00136
+         Mean episode cost_hip_pos: 0.00256
+       Mean episode cost_pos_limit: 0.00565
+     Mean episode cost_stand_still: 0.01071
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 835584
+                    Iteration time: 1.31s
+                        Total time: 64.99s
+                               ETA: 11405.7s
+################################################################################
+                      [1m Learning iteration 34/6000 
+                       Computation: 17716 steps/s (collection: 0.726s, learning 0.661s)
+               Value function loss: 0.26977
+          cost value function loss: 23199865402756601818157554860032.00000
+                    Surrogate loss: 0.00000
+                         viol loss: 0.44884
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 29.74
+      Mean episode rew_action_rate: -0.00850
+Mean episode rew_action_smoothness: -0.02458
+       Mean episode rew_ang_vel_xy: -11460888684321818279936.00000
+      Mean episode rew_base_height: -65754833616896.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -494302956491814993920.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -26129.82422
+        Mean episode rew_foot_slip: -2.28653
+        Mean episode rew_lin_vel_z: -18911461459282100224.00000
+        Mean episode rew_low_speed: -0.00485
+Mean episode rew_orientation_eular: 0.00072
+           Mean episode rew_powers: -362734.81250
+   Mean episode rew_track_vel_hard: -12954656.00000
+ Mean episode rew_tracking_ang_vel: 0.00362
+ Mean episode rew_tracking_lin_vel: 0.01074
+ Mean episode rew_vel_mismatch_exp: 0.00693
+  Mean episode cost_acc_smoothness: 6297478656.00000
+     Mean episode cost_base_height: 50580638662656.00000
+       Mean episode cost_collision: 0.00190
+  Mean episode cost_dof_vel_limits: 0.00204
+   Mean episode cost_feet_air_time: 0.00141
+         Mean episode cost_hip_pos: 0.00282
+       Mean episode cost_pos_limit: 0.00569
+     Mean episode cost_stand_still: 0.01188
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 860160
+                    Iteration time: 1.39s
+                        Total time: 66.38s
+                               ETA: 11314.4s
+################################################################################
+                      [1m Learning iteration 35/6000 
+                       Computation: 17898 steps/s (collection: 0.707s, learning 0.666s)
+               Value function loss: 0.27946
+          cost value function loss: 118327779262464.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.40287
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 29.60
+      Mean episode rew_action_rate: -0.00809
+Mean episode rew_action_smoothness: -0.02332
+       Mean episode rew_ang_vel_xy: -757362.43750
+      Mean episode rew_base_height: -0.00006
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -150184.28125
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -0.02566
+        Mean episode rew_foot_slip: -0.00257
+        Mean episode rew_lin_vel_z: -5257.60352
+        Mean episode rew_low_speed: -0.00484
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -0.00810
+   Mean episode rew_track_vel_hard: -0.03078
+ Mean episode rew_tracking_ang_vel: 0.00357
+ Mean episode rew_tracking_lin_vel: 0.00955
+ Mean episode rew_vel_mismatch_exp: 0.00664
+  Mean episode cost_acc_smoothness: 140.64304
+     Mean episode cost_base_height: 0.00004
+       Mean episode cost_collision: 0.00178
+  Mean episode cost_dof_vel_limits: 0.00207
+   Mean episode cost_feet_air_time: 0.00143
+         Mean episode cost_hip_pos: 0.00258
+       Mean episode cost_pos_limit: 0.00577
+     Mean episode cost_stand_still: 0.00916
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 884736
+                    Iteration time: 1.37s
+                        Total time: 67.75s
+                               ETA: 11225.8s
+################################################################################
+                      [1m Learning iteration 36/6000 
+                       Computation: 17357 steps/s (collection: 0.761s, learning 0.655s)
+               Value function loss: 0.28173
+          cost value function loss: inf
+                    Surrogate loss: -0.00000
+                         viol loss: 0.45506
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 28.38
+      Mean episode rew_action_rate: -0.00802
+Mean episode rew_action_smoothness: -0.02318
+       Mean episode rew_ang_vel_xy: -2432621716624776666021888.00000
+      Mean episode rew_base_height: -159675969213351067648.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -6615603205022536433664.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -932779.93750
+        Mean episode rew_foot_slip: -6.51967
+        Mean episode rew_lin_vel_z: -1345291371807768576.00000
+        Mean episode rew_low_speed: -0.00517
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -2265960.00000
+   Mean episode rew_track_vel_hard: -196455264.00000
+ Mean episode rew_tracking_ang_vel: 0.00332
+ Mean episode rew_tracking_lin_vel: 0.00923
+ Mean episode rew_vel_mismatch_exp: 0.00652
+  Mean episode cost_acc_smoothness: 39339585536.00000
+     Mean episode cost_base_height: 122827657799694024704.00000
+       Mean episode cost_collision: 0.00257
+  Mean episode cost_dof_vel_limits: 0.00213
+   Mean episode cost_feet_air_time: 0.00138
+         Mean episode cost_hip_pos: 0.00300
+       Mean episode cost_pos_limit: 0.00600
+     Mean episode cost_stand_still: 0.00908
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 909312
+                    Iteration time: 1.42s
+                        Total time: 69.17s
+                               ETA: 11148.8s
+################################################################################
+                      [1m Learning iteration 37/6000 
+                       Computation: 17445 steps/s (collection: 0.750s, learning 0.659s)
+               Value function loss: 0.27458
+          cost value function loss: 1024797880620532367360.00000
+                    Surrogate loss: 0.00000
+                         viol loss: 0.44282
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 31.31
+      Mean episode rew_action_rate: -0.00823
+Mean episode rew_action_smoothness: -0.02377
+       Mean episode rew_ang_vel_xy: -87522673683341508608.00000
+      Mean episode rew_base_height: -32194094.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -759658562224914432.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -4081.06885
+        Mean episode rew_foot_slip: -0.00532
+        Mean episode rew_lin_vel_z: -3728590763982848.00000
+        Mean episode rew_low_speed: -0.00538
+Mean episode rew_orientation_eular: 0.00070
+           Mean episode rew_powers: -24440.22656
+   Mean episode rew_track_vel_hard: -2832818.50000
+ Mean episode rew_tracking_ang_vel: 0.00359
+ Mean episode rew_tracking_lin_vel: 0.00889
+ Mean episode rew_vel_mismatch_exp: 0.00672
+  Mean episode cost_acc_smoothness: 424310080.00000
+     Mean episode cost_base_height: 24764692.00000
+       Mean episode cost_collision: 0.00216
+  Mean episode cost_dof_vel_limits: 0.00208
+   Mean episode cost_feet_air_time: 0.00146
+         Mean episode cost_hip_pos: 0.00267
+       Mean episode cost_pos_limit: 0.00565
+     Mean episode cost_stand_still: 0.00923
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 933888
+                    Iteration time: 1.41s
+                        Total time: 70.57s
+                               ETA: 11074.6s
+################################################################################
+                      [1m Learning iteration 38/6000 
+                       Computation: 18079 steps/s (collection: 0.700s, learning 0.659s)
+               Value function loss: 0.27834
+          cost value function loss: inf
+                    Surrogate loss: 0.00000
+                         viol loss: 0.49936
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 28.76
+      Mean episode rew_action_rate: -0.00769
+Mean episode rew_action_smoothness: -0.02218
+       Mean episode rew_ang_vel_xy: -863276927803396718592.00000
+      Mean episode rew_base_height: -9639204766089216.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -92453868984707579904.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -23646.18359
+        Mean episode rew_foot_slip: -0.52796
+        Mean episode rew_lin_vel_z: -2140036380867166208.00000
+        Mean episode rew_low_speed: -0.00439
+Mean episode rew_orientation_eular: 0.00065
+           Mean episode rew_powers: -240128.92188
+   Mean episode rew_track_vel_hard: -12117296.00000
+ Mean episode rew_tracking_ang_vel: 0.00329
+ Mean episode rew_tracking_lin_vel: 0.00895
+ Mean episode rew_vel_mismatch_exp: 0.00618
+  Mean episode cost_acc_smoothness: 4168906240.00000
+     Mean episode cost_base_height: 7414773020884992.00000
+       Mean episode cost_collision: 0.00188
+  Mean episode cost_dof_vel_limits: 0.00210
+   Mean episode cost_feet_air_time: 0.00130
+         Mean episode cost_hip_pos: 0.00248
+       Mean episode cost_pos_limit: 0.00563
+     Mean episode cost_stand_still: 0.01065
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 958464
+                    Iteration time: 1.36s
+                        Total time: 71.93s
+                               ETA: 10996.6s
+################################################################################
+                      [1m Learning iteration 39/6000 
+                       Computation: 17853 steps/s (collection: 0.715s, learning 0.662s)
+               Value function loss: 0.27835
+          cost value function loss: 26179786398961021101824926547968.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.51587
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 27.99
+      Mean episode rew_action_rate: -0.00791
+Mean episode rew_action_smoothness: -0.02280
+       Mean episode rew_ang_vel_xy: -6595890798133248.00000
+      Mean episode rew_base_height: -80018688442368.00000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -485507767205888.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -172.55272
+        Mean episode rew_foot_slip: -0.00629
+        Mean episode rew_lin_vel_z: -72193669070848.00000
+        Mean episode rew_low_speed: -0.00476
+Mean episode rew_orientation_eular: 0.00069
+           Mean episode rew_powers: -589.87421
+   Mean episode rew_track_vel_hard: -23136.14844
+ Mean episode rew_tracking_ang_vel: 0.00330
+ Mean episode rew_tracking_lin_vel: 0.00946
+ Mean episode rew_vel_mismatch_exp: 0.00639
+  Mean episode cost_acc_smoothness: 10240873.00000
+     Mean episode cost_base_height: 61552845651968.00000
+       Mean episode cost_collision: 0.00158
+  Mean episode cost_dof_vel_limits: 0.00199
+   Mean episode cost_feet_air_time: 0.00139
+         Mean episode cost_hip_pos: 0.00260
+       Mean episode cost_pos_limit: 0.00551
+     Mean episode cost_stand_still: 0.00964
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 983040
+                    Iteration time: 1.38s
+                        Total time: 73.31s
+                               ETA: 10925.1s
+################################################################################
+                      [1m Learning iteration 40/6000 
+                       Computation: 17732 steps/s (collection: 0.718s, learning 0.668s)
+               Value function loss: 0.27665
+          cost value function loss: 26573700967551972725862957056.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.46920
+             Mean action noise std: 1.06
+                       Mean reward: 0.01
+               Mean episode length: 27.91
+      Mean episode rew_action_rate: -0.00774
+Mean episode rew_action_smoothness: -0.02230
+       Mean episode rew_ang_vel_xy: -2328056924303706376110080.00000
+      Mean episode rew_base_height: -4613170266112.00000
+Mean episode rew_default_joint_pos: -0.00010
+          Mean episode rew_dof_acc: -246215088263272251523072.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1246262.25000
+        Mean episode rew_foot_slip: -0.02258
+        Mean episode rew_lin_vel_z: -1088835704121829883904.00000
+        Mean episode rew_low_speed: -0.00452
+Mean episode rew_orientation_eular: 0.00066
+           Mean episode rew_powers: -9895836.00000
+   Mean episode rew_track_vel_hard: -1734343040.00000
+ Mean episode rew_tracking_ang_vel: 0.00328
+ Mean episode rew_tracking_lin_vel: 0.00886
+ Mean episode rew_vel_mismatch_exp: 0.00625
+  Mean episode cost_acc_smoothness: 171803148288.00000
+     Mean episode cost_base_height: 3548592472064.00000
+       Mean episode cost_collision: 0.00175
+  Mean episode cost_dof_vel_limits: 0.00204
+   Mean episode cost_feet_air_time: 0.00135
+         Mean episode cost_hip_pos: 0.00256
+       Mean episode cost_pos_limit: 0.00525
+     Mean episode cost_stand_still: 0.00837
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1007616
+                    Iteration time: 1.39s
+                        Total time: 74.70s
+                               ETA: 10858.3s
+Traceback (most recent call last):
+  File "./train.py", line 27, in <module>
+    train(args)
+  File "./train.py", line 18, in train
+    ppo_runner.learn(num_learning_iterations=train_cfg.runner.max_iterations, init_at_random_ep_len=True)
+  File "/home/pi/Downloads/LocomotionWithNP3O-master/runner/on_constraint_policy_runner.py", line 146, in learn
+    actions = self.alg.act(obs, critic_obs, infos)
+  File "/home/pi/Downloads/LocomotionWithNP3O-master/algorithm/np3o.py", line 101, in act
+    self.transition.actions = self.actor_critic.act(obs).detach()
+  File "/home/pi/Downloads/LocomotionWithNP3O-master/modules/actor_critic.py", line 1493, in act
+    self.update_distribution(obs)
+  File "/home/pi/Downloads/LocomotionWithNP3O-master/modules/actor_critic.py", line 1490, in update_distribution
+    self.distribution = Normal(mean, mean*0. + self.get_std())
+  File "/home/pi/anaconda3/envs/HIT/lib/python3.8/site-packages/torch/distributions/normal.py", line 56, in __init__
+    super().__init__(batch_shape, validate_args=validate_args)
+  File "/home/pi/anaconda3/envs/HIT/lib/python3.8/site-packages/torch/distributions/distribution.py", line 68, in __init__
+    raise ValueError(
+ValueError: Expected parameter loc (Tensor of shape (1024, 12)) of distribution Normal(loc: torch.Size([1024, 12]), scale: torch.Size([1024, 12])) to satisfy the constraint Real(), but found invalid values:
+tensor([[-0.0810,  0.0671,  0.0154,  ..., -0.0640,  0.0094, -0.1103],
+        [-0.0078,  0.0121,  0.0122,  ..., -0.1833,  0.1032, -0.0664],
+        [ 0.0629,  0.1456,  0.0593,  ...,  0.0049,  0.1984, -0.0671],
+        ...,
+        [ 0.0388, -0.1579,  0.0534,  ...,  0.0639, -0.1099, -0.2455],
+        [-0.0475,  0.0910, -0.1065,  ..., -0.0110,  0.0023, -0.1055],
+        [ 0.1084,  0.0587,  0.0979,  ...,  0.0750,  0.0017, -0.0293]],
+       device='cuda:0')
+################################################################################
+                      [1m Learning iteration 41/6000 
+                       Computation: 17909 steps/s (collection: 0.717s, learning 0.656s)
+               Value function loss: 0.26271
+          cost value function loss: 113557229568866295843127296.00000
+                    Surrogate loss: -0.00000
+                         viol loss: 0.49024
+             Mean action noise std: 1.06
+                       Mean reward: 0.02
+               Mean episode length: 26.28
+      Mean episode rew_action_rate: -0.00775
+Mean episode rew_action_smoothness: -0.02229
+       Mean episode rew_ang_vel_xy: -342498499459947088052224.00000
+      Mean episode rew_base_height: -7607657.50000
+Mean episode rew_default_joint_pos: -0.00011
+          Mean episode rew_dof_acc: -79963726234171624914944.00000
+Mean episode rew_feet_clearance_inter: 0.00000
+   Mean episode rew_foot_clearance: -1016546.75000
+        Mean episode rew_foot_slip: -1.38652
+        Mean episode rew_lin_vel_z: -271338851693072744448.00000
+        Mean episode rew_low_speed: -0.00457
+Mean episode rew_orientation_eular: 0.00067
+           Mean episode rew_powers: -5600969.50000
+   Mean episode rew_track_vel_hard: -896803072.00000
+ Mean episode rew_tracking_ang_vel: 0.00341
+ Mean episode rew_tracking_lin_vel: 0.00913
+ Mean episode rew_vel_mismatch_exp: 0.00631
+  Mean episode cost_acc_smoothness: 97239040000.00000
+     Mean episode cost_base_height: 5852045.00000
+       Mean episode cost_collision: 0.00156
+  Mean episode cost_dof_vel_limits: 0.00209
+   Mean episode cost_feet_air_time: 0.00134
+         Mean episode cost_hip_pos: 0.00248
+       Mean episode cost_pos_limit: 0.00499
+     Mean episode cost_stand_still: 0.00934
+    Mean episode cost_torque_limit: 0.00000
+--------------------------------------------------------------------------------
+                   Total timesteps: 1032192
+                    Iteration time: 1.37s
+                        Total time: 76.07s
+                               ETA: 10792.7s

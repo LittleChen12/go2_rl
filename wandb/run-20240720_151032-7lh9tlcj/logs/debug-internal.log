@@ -1,0 +1,368 @@
+2024-07-20 15:10:33,141 INFO    MainThread:3541456 [internal.py:wandb_internal():90] W&B internal server running at pid: 3541456, started at: 2024-07-20 15:10:33.140996
+2024-07-20 15:10:33,142 INFO    WriterThread:3541456 [datastore.py:open_for_write():75] open: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/run-7lh9tlcj.wandb
+2024-07-20 15:10:33,142 DEBUG   SenderThread:3541456 [sender.py:send():236] send: header
+2024-07-20 15:10:33,142 DEBUG   SenderThread:3541456 [sender.py:send():236] send: run
+2024-07-20 15:10:33,146 DEBUG   SenderThread:3541456 [git.py:repo():29] git repository is invalid
+2024-07-20 15:10:33,740 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: check_version
+2024-07-20 15:10:33,748 INFO    SenderThread:3541456 [dir_watcher.py:__init__():216] watching files in: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files
+2024-07-20 15:10:33,748 INFO    SenderThread:3541456 [sender.py:_start_run_threads():815] run started: 7lh9tlcj with start time 1721459432
+2024-07-20 15:10:33,748 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:33,748 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:33,749 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: check_version
+2024-07-20 15:10:34,748 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:38,741 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: run_start
+2024-07-20 15:10:38,779 DEBUG   HandlerThread:3541456 [meta.py:__init__():35] meta init
+2024-07-20 15:10:38,779 DEBUG   HandlerThread:3541456 [meta.py:__init__():49] meta init done
+2024-07-20 15:10:38,779 DEBUG   HandlerThread:3541456 [meta.py:probe():209] probe
+2024-07-20 15:10:38,785 DEBUG   HandlerThread:3541456 [git.py:repo():29] git repository is invalid
+2024-07-20 15:10:38,785 DEBUG   HandlerThread:3541456 [meta.py:_save_pip():53] save pip
+2024-07-20 15:10:38,786 DEBUG   HandlerThread:3541456 [meta.py:_save_pip():67] save pip done
+2024-07-20 15:10:38,786 DEBUG   HandlerThread:3541456 [meta.py:_save_conda():74] save conda
+2024-07-20 15:10:39,749 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/conda-environment.yaml
+2024-07-20 15:10:39,750 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/requirements.txt
+2024-07-20 15:10:40,026 DEBUG   HandlerThread:3541456 [meta.py:_save_conda():84] save conda done
+2024-07-20 15:10:40,026 DEBUG   HandlerThread:3541456 [meta.py:probe():247] probe done
+2024-07-20 15:10:40,050 DEBUG   SenderThread:3541456 [sender.py:send():236] send: files
+2024-07-20 15:10:40,051 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2024-07-20 15:10:40,054 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-20 15:10:40,055 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: stop_status
+2024-07-20 15:10:40,750 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/conda-environment.yaml
+2024-07-20 15:10:40,750 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-metadata.json
+2024-07-20 15:10:40,750 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:40,784 DEBUG   SenderThread:3541456 [sender.py:send():236] send: telemetry
+2024-07-20 15:10:41,704 INFO    Thread-11 :3541456 [upload_job.py:push():138] Uploaded file /tmp/tmpalmze_bgwandb/ndfofvdj-wandb-metadata.json
+2024-07-20 15:10:42,750 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:44,887 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:46,414 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:46,416 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:46,416 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:46,416 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:46,751 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:46,751 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:48,462 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:48,463 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:48,464 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:48,464 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:48,752 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:48,752 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:49,895 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:49,895 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:49,896 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:49,896 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:50,752 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:50,752 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:51,252 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:51,253 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:51,253 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:51,253 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:51,753 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:52,613 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:52,614 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:52,614 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:52,614 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:52,753 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:52,753 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:54,049 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:54,050 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:54,050 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:54,050 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:54,753 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:54,753 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:55,412 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:55,414 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:55,414 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:55,415 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:55,754 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:55,893 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-20 15:10:55,893 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: stop_status
+2024-07-20 15:10:56,754 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:56,817 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:56,818 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:56,819 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:56,819 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:57,754 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:58,172 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:58,173 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:58,173 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:58,173 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:58,755 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:10:58,755 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:10:59,602 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:10:59,602 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:10:59,603 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:10:59,604 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:10:59,755 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:00,756 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:00,984 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:00,985 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:00,985 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:00,985 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:01,756 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:02,404 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:02,405 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:02,405 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:02,405 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:02,756 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:02,756 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:03,782 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:03,988 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:03,988 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:03,989 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:04,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:04,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/config.yaml
+2024-07-20 15:11:04,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:05,166 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:05,167 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:05,167 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:05,168 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:05,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:06,574 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:06,575 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:06,575 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:06,576 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:06,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:06,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:06,981 DEBUG   SenderThread:3541456 [sender.py:send():236] send: stats
+2024-07-20 15:11:07,929 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:07,930 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:07,930 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:07,930 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:08,757 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:08,758 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:09,314 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:09,315 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:09,315 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:09,315 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:09,758 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:10,715 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:10,716 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:10,716 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:10,717 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:10,758 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:10,758 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:11,503 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-20 15:11:11,503 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: stop_status
+2024-07-20 15:11:12,054 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:12,229 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:12,229 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:12,230 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:12,758 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:12,759 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:13,466 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:13,467 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:13,467 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:13,467 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:13,759 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:14,759 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:14,856 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:14,857 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:14,857 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:14,858 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:15,759 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:16,343 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:16,344 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:16,344 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:16,345 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:16,759 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:16,760 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:17,723 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:17,723 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:17,724 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:17,724 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:17,760 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:18,760 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:19,090 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:19,091 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:19,091 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:19,092 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:19,760 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:20,528 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:20,529 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:20,529 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:20,529 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:20,761 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:20,761 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:21,923 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:21,923 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:21,924 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:21,924 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:22,761 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:22,761 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:23,345 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:23,346 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:23,346 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:23,346 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:23,762 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:24,713 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:24,714 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:24,715 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:24,715 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:24,762 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:24,762 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:26,055 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:26,057 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:26,057 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:26,057 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:26,762 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:26,762 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:27,232 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-20 15:11:27,232 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: stop_status
+2024-07-20 15:11:27,528 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:27,791 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:27,791 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:27,791 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:28,763 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:28,763 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:28,903 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:28,905 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:28,905 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:28,905 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:29,763 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:30,284 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-20 15:11:30,284 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:30,285 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:30,285 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:30,379 DEBUG   SenderThread:3541456 [sender.py:send():236] send: telemetry
+2024-07-20 15:11:30,764 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:30,764 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:31,764 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:32,765 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:33,194 DEBUG   SenderThread:3541456 [sender.py:send():236] send: exit
+2024-07-20 15:11:33,195 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:33,195 INFO    SenderThread:3541456 [sender.py:send_exit():372] handling exit code: 1
+2024-07-20 15:11:33,195 INFO    SenderThread:3541456 [sender.py:send_exit():374] handling runtime: 54
+2024-07-20 15:11:33,196 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:33,196 INFO    SenderThread:3541456 [sender.py:send_exit():380] send defer
+2024-07-20 15:11:33,196 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:33,197 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,197 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 0
+2024-07-20 15:11:33,197 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,197 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 0
+2024-07-20 15:11:33,197 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 1
+2024-07-20 15:11:33,198 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,198 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 1
+2024-07-20 15:11:33,285 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,285 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 1
+2024-07-20 15:11:33,285 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 2
+2024-07-20 15:11:33,285 DEBUG   SenderThread:3541456 [sender.py:send():236] send: stats
+2024-07-20 15:11:33,285 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,285 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 2
+2024-07-20 15:11:33,286 DEBUG   SenderThread:3541456 [sender.py:send():236] send: history
+2024-07-20 15:11:33,287 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:33,287 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:33,287 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,287 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 2
+2024-07-20 15:11:33,287 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 3
+2024-07-20 15:11:33,288 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,288 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 3
+2024-07-20 15:11:33,288 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,288 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 3
+2024-07-20 15:11:33,288 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 4
+2024-07-20 15:11:33,288 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,288 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 4
+2024-07-20 15:11:33,288 DEBUG   SenderThread:3541456 [sender.py:send():236] send: summary
+2024-07-20 15:11:33,289 INFO    SenderThread:3541456 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-20 15:11:33,289 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,289 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 4
+2024-07-20 15:11:33,289 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 5
+2024-07-20 15:11:33,290 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,290 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 5
+2024-07-20 15:11:33,290 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,290 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 5
+2024-07-20 15:11:33,298 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:33,765 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:33,765 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:33,896 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 6
+2024-07-20 15:11:33,896 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:33,897 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:33,897 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 6
+2024-07-20 15:11:33,898 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:33,898 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 6
+2024-07-20 15:11:33,898 INFO    SenderThread:3541456 [dir_watcher.py:finish():353] shutting down directory watcher
+2024-07-20 15:11:33,998 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:34,766 INFO    Thread-7  :3541456 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/config.yaml
+2024-07-20 15:11:34,766 INFO    SenderThread:3541456 [dir_watcher.py:finish():383] scan: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files
+2024-07-20 15:11:34,767 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/requirements.txt requirements.txt
+2024-07-20 15:11:34,767 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/conda-environment.yaml conda-environment.yaml
+2024-07-20 15:11:34,767 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-metadata.json wandb-metadata.json
+2024-07-20 15:11:34,767 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/config.yaml config.yaml
+2024-07-20 15:11:34,767 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log output.log
+2024-07-20 15:11:34,772 INFO    SenderThread:3541456 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json wandb-summary.json
+2024-07-20 15:11:34,775 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 7
+2024-07-20 15:11:34,776 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:34,781 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:34,785 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 7
+2024-07-20 15:11:34,789 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:34,789 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 7
+2024-07-20 15:11:34,789 INFO    SenderThread:3541456 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-20 15:11:34,878 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:34,878 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:34,981 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:34,981 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,083 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,084 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,186 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,186 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,288 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,289 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,391 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,392 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,494 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,494 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,596 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,596 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,698 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,698 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,800 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,801 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:35,903 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:35,903 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,005 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,006 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,020 INFO    Thread-13 :3541456 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/conda-environment.yaml
+2024-07-20 15:11:36,083 INFO    Thread-12 :3541456 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/requirements.txt
+2024-07-20 15:11:36,107 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,108 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,181 INFO    Thread-16 :3541456 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/wandb-summary.json
+2024-07-20 15:11:36,210 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,210 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,230 INFO    Thread-14 :3541456 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/config.yaml
+2024-07-20 15:11:36,312 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,313 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,415 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,415 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,518 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,518 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,575 INFO    Thread-15 :3541456 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/files/output.log
+2024-07-20 15:11:36,620 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,621 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,722 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:36,722 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:36,776 INFO    Thread-6  :3541456 [sender.py:transition_state():393] send defer: 8
+2024-07-20 15:11:36,776 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:36,777 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 8
+2024-07-20 15:11:36,777 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:36,777 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 8
+2024-07-20 15:11:36,824 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-20 15:11:37,384 WARNING MainThread:3541456 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-20 15:11:37,835 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 9
+2024-07-20 15:11:37,836 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: poll_exit
+2024-07-20 15:11:37,837 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:37,837 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 9
+2024-07-20 15:11:37,837 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:37,837 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 9
+2024-07-20 15:11:37,837 INFO    SenderThread:3541456 [sender.py:transition_state():393] send defer: 10
+2024-07-20 15:11:37,838 DEBUG   HandlerThread:3541456 [handler.py:handle_request():140] handle_request: defer
+2024-07-20 15:11:37,838 DEBUG   SenderThread:3541456 [sender.py:send():236] send: final
+2024-07-20 15:11:37,839 INFO    HandlerThread:3541456 [handler.py:handle_request_defer():163] handle defer: 10
+2024-07-20 15:11:37,839 DEBUG   SenderThread:3541456 [sender.py:send():236] send: footer
+2024-07-20 15:11:37,839 DEBUG   SenderThread:3541456 [sender.py:send_request():250] send_request: defer
+2024-07-20 15:11:37,839 INFO    SenderThread:3541456 [sender.py:send_request_defer():389] handle sender defer: 10
+2024-07-20 15:11:38,386 WARNING MainThread:3541456 [internal.py:is_dead():387] Internal process exiting, parent pid 3540988 disappeared
+2024-07-20 15:11:38,386 ERROR   MainThread:3541456 [internal.py:wandb_internal():149] Internal process shutdown.
+2024-07-20 15:11:38,839 INFO    WriterThread:3541456 [datastore.py:close():279] close: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240720_151032-7lh9tlcj/run-7lh9tlcj.wandb
+2024-07-20 15:11:38,839 INFO    SenderThread:3541456 [sender.py:finish():1114] shutting down sender
+2024-07-20 15:11:38,840 INFO    SenderThread:3541456 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-20 15:11:38,840 INFO    SenderThread:3541456 [file_pusher.py:join():176] waiting for file pusher
+2024-07-20 15:11:38,841 INFO    HandlerThread:3541456 [handler.py:finish():806] shutting down handler
+2024-07-20 15:11:38,842 INFO    MainThread:3541456 [internal.py:handle_exit():80] Internal process exited

@@ -1,0 +1,211 @@
+2024-07-23 21:22:11,556 INFO    MainThread:3784767 [internal.py:wandb_internal():90] W&B internal server running at pid: 3784767, started at: 2024-07-23 21:22:11.556737
+2024-07-23 21:22:11,558 INFO    WriterThread:3784767 [datastore.py:open_for_write():75] open: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/run-cb6z81xz.wandb
+2024-07-23 21:22:11,558 DEBUG   SenderThread:3784767 [sender.py:send():236] send: header
+2024-07-23 21:22:11,558 DEBUG   SenderThread:3784767 [sender.py:send():236] send: run
+2024-07-23 21:22:11,562 DEBUG   SenderThread:3784767 [git.py:repo():29] git repository is invalid
+2024-07-23 21:22:12,347 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: check_version
+2024-07-23 21:22:12,349 INFO    SenderThread:3784767 [dir_watcher.py:__init__():216] watching files in: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files
+2024-07-23 21:22:12,350 INFO    SenderThread:3784767 [sender.py:_start_run_threads():815] run started: cb6z81xz with start time 1721740931
+2024-07-23 21:22:12,350 DEBUG   SenderThread:3784767 [sender.py:send():236] send: summary
+2024-07-23 21:22:12,350 INFO    SenderThread:3784767 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-23 21:22:12,350 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: check_version
+2024-07-23 21:22:13,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-summary.json
+2024-07-23 21:22:13,525 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: run_start
+2024-07-23 21:22:13,558 DEBUG   HandlerThread:3784767 [meta.py:__init__():35] meta init
+2024-07-23 21:22:13,558 DEBUG   HandlerThread:3784767 [meta.py:__init__():49] meta init done
+2024-07-23 21:22:13,558 DEBUG   HandlerThread:3784767 [meta.py:probe():209] probe
+2024-07-23 21:22:13,565 DEBUG   HandlerThread:3784767 [git.py:repo():29] git repository is invalid
+2024-07-23 21:22:13,565 DEBUG   HandlerThread:3784767 [meta.py:_save_pip():53] save pip
+2024-07-23 21:22:13,565 DEBUG   HandlerThread:3784767 [meta.py:_save_pip():67] save pip done
+2024-07-23 21:22:13,566 DEBUG   HandlerThread:3784767 [meta.py:_save_conda():74] save conda
+2024-07-23 21:22:14,351 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/requirements.txt
+2024-07-23 21:22:14,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/conda-environment.yaml
+2024-07-23 21:22:14,802 DEBUG   HandlerThread:3784767 [meta.py:_save_conda():84] save conda done
+2024-07-23 21:22:14,802 DEBUG   HandlerThread:3784767 [meta.py:probe():247] probe done
+2024-07-23 21:22:14,826 DEBUG   SenderThread:3784767 [sender.py:send():236] send: files
+2024-07-23 21:22:14,827 INFO    SenderThread:3784767 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2024-07-23 21:22:14,829 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-23 21:22:14,829 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: stop_status
+2024-07-23 21:22:15,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/conda-environment.yaml
+2024-07-23 21:22:15,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-metadata.json
+2024-07-23 21:22:15,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log
+2024-07-23 21:22:15,810 DEBUG   SenderThread:3784767 [sender.py:send():236] send: telemetry
+2024-07-23 21:22:16,700 INFO    Thread-11 :3784767 [upload_job.py:push():138] Uploaded file /tmp/tmp04uiapfvwandb/2zv2e66n-wandb-metadata.json
+2024-07-23 21:22:17,352 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log
+2024-07-23 21:22:17,519 DEBUG   SenderThread:3784767 [sender.py:send():236] send: telemetry
+2024-07-23 21:22:19,353 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log
+2024-07-23 21:22:19,997 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:19,997 DEBUG   SenderThread:3784767 [sender.py:send():236] send: exit
+2024-07-23 21:22:19,998 INFO    SenderThread:3784767 [sender.py:send_exit():372] handling exit code: 1
+2024-07-23 21:22:19,998 INFO    SenderThread:3784767 [sender.py:send_exit():374] handling runtime: 6
+2024-07-23 21:22:19,998 INFO    SenderThread:3784767 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-23 21:22:19,999 INFO    SenderThread:3784767 [sender.py:send_exit():380] send defer
+2024-07-23 21:22:19,999 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:20,000 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,000 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 0
+2024-07-23 21:22:20,000 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,000 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 0
+2024-07-23 21:22:20,000 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 1
+2024-07-23 21:22:20,000 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,001 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 1
+2024-07-23 21:22:20,048 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,048 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 1
+2024-07-23 21:22:20,049 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 2
+2024-07-23 21:22:20,049 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,049 DEBUG   SenderThread:3784767 [sender.py:send():236] send: stats
+2024-07-23 21:22:20,050 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 2
+2024-07-23 21:22:20,050 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,050 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 2
+2024-07-23 21:22:20,050 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 3
+2024-07-23 21:22:20,050 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,050 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 3
+2024-07-23 21:22:20,050 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,051 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 3
+2024-07-23 21:22:20,051 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 4
+2024-07-23 21:22:20,051 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,051 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 4
+2024-07-23 21:22:20,051 DEBUG   SenderThread:3784767 [sender.py:send():236] send: summary
+2024-07-23 21:22:20,051 INFO    SenderThread:3784767 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-23 21:22:20,051 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,052 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 4
+2024-07-23 21:22:20,052 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 5
+2024-07-23 21:22:20,052 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:20,052 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 5
+2024-07-23 21:22:20,052 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:20,052 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 5
+2024-07-23 21:22:20,101 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:20,353 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-summary.json
+2024-07-23 21:22:20,354 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log
+2024-07-23 21:22:21,224 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 6
+2024-07-23 21:22:21,224 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,225 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:21,225 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 6
+2024-07-23 21:22:21,225 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:21,225 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 6
+2024-07-23 21:22:21,225 INFO    SenderThread:3784767 [dir_watcher.py:finish():353] shutting down directory watcher
+2024-07-23 21:22:21,327 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,354 INFO    Thread-7  :3784767 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/config.yaml
+2024-07-23 21:22:21,355 INFO    SenderThread:3784767 [dir_watcher.py:finish():383] scan: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files
+2024-07-23 21:22:21,355 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/requirements.txt requirements.txt
+2024-07-23 21:22:21,355 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/conda-environment.yaml conda-environment.yaml
+2024-07-23 21:22:21,355 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-metadata.json wandb-metadata.json
+2024-07-23 21:22:21,355 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/config.yaml config.yaml
+2024-07-23 21:22:21,360 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log output.log
+2024-07-23 21:22:21,360 INFO    SenderThread:3784767 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-summary.json wandb-summary.json
+2024-07-23 21:22:21,364 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 7
+2024-07-23 21:22:21,369 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,373 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:21,378 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 7
+2024-07-23 21:22:21,378 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:21,379 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 7
+2024-07-23 21:22:21,379 INFO    SenderThread:3784767 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-23 21:22:21,476 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,476 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,578 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,579 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,681 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,681 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,783 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,783 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,885 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,885 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:21,988 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:21,988 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,090 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,090 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,192 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,193 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,294 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,294 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,397 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,397 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,499 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,499 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,601 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,602 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,704 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,704 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,806 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,807 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:22,909 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:22,909 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,011 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,011 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,113 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,113 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,172 INFO    Thread-16 :3784767 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/wandb-summary.json
+2024-07-23 21:22:23,193 INFO    Thread-14 :3784767 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/config.yaml
+2024-07-23 21:22:23,215 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,216 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,318 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,318 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,420 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,421 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,464 INFO    Thread-12 :3784767 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/requirements.txt
+2024-07-23 21:22:23,523 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,523 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,625 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,625 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,728 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,728 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,830 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,831 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:23,933 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:23,933 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,035 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,036 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,138 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,139 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,204 INFO    Thread-13 :3784767 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/conda-environment.yaml
+2024-07-23 21:22:24,241 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,241 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,343 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,343 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,445 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,445 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,548 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,548 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,651 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,651 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,753 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,753 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,855 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,855 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:24,957 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:24,958 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:25,038 INFO    Thread-15 :3784767 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/files/output.log
+2024-07-23 21:22:25,060 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:25,060 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:25,162 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:25,162 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:25,238 INFO    Thread-6  :3784767 [sender.py:transition_state():393] send defer: 8
+2024-07-23 21:22:25,239 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:25,239 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 8
+2024-07-23 21:22:25,240 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:25,240 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 8
+2024-07-23 21:22:25,264 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:25,500 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 9
+2024-07-23 21:22:25,500 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:25,501 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:25,501 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 9
+2024-07-23 21:22:25,501 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:25,502 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 9
+2024-07-23 21:22:25,502 INFO    SenderThread:3784767 [sender.py:transition_state():393] send defer: 10
+2024-07-23 21:22:25,503 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: defer
+2024-07-23 21:22:25,503 INFO    HandlerThread:3784767 [handler.py:handle_request_defer():163] handle defer: 10
+2024-07-23 21:22:25,503 DEBUG   SenderThread:3784767 [sender.py:send():236] send: final
+2024-07-23 21:22:25,503 DEBUG   SenderThread:3784767 [sender.py:send():236] send: footer
+2024-07-23 21:22:25,503 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: defer
+2024-07-23 21:22:25,503 INFO    SenderThread:3784767 [sender.py:send_request_defer():389] handle sender defer: 10
+2024-07-23 21:22:25,604 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-23 21:22:25,604 DEBUG   SenderThread:3784767 [sender.py:send_request():250] send_request: poll_exit
+2024-07-23 21:22:25,605 INFO    SenderThread:3784767 [file_pusher.py:join():176] waiting for file pusher
+2024-07-23 21:22:27,427 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: sampled_history
+2024-07-23 21:22:27,428 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: get_summary
+2024-07-23 21:22:27,428 DEBUG   HandlerThread:3784767 [handler.py:handle_request():140] handle_request: shutdown
+2024-07-23 21:22:27,429 INFO    HandlerThread:3784767 [handler.py:finish():806] shutting down handler
+2024-07-23 21:22:27,504 INFO    WriterThread:3784767 [datastore.py:close():279] close: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_212211-cb6z81xz/run-cb6z81xz.wandb
+2024-07-23 21:22:28,325 INFO    SenderThread:3784767 [sender.py:finish():1114] shutting down sender
+2024-07-23 21:22:28,325 INFO    SenderThread:3784767 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-23 21:22:28,326 INFO    SenderThread:3784767 [file_pusher.py:join():176] waiting for file pusher
+2024-07-23 21:22:28,327 INFO    MainThread:3784767 [internal.py:handle_exit():80] Internal process exited

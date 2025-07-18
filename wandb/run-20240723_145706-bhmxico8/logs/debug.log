@@ -1,0 +1,27 @@
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_setup.py:_flush():76] Configure stats pid to 2601882
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_setup.py:_flush():76] Loading settings from /home/pi/.config/wandb/settings
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_setup.py:_flush():76] Loading settings from /home/pi/Downloads/LocomotionWithNP3O-master/wandb/settings
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_setup.py:_flush():76] Loading settings from environment variables: {}
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_setup.py:_flush():76] Inferring run settings from compute environment: {'program_relpath': 'train.py', 'program': './train.py'}
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_init.py:_log_setup():461] Logging user logs to /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_145706-bhmxico8/logs/debug.log
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_init.py:_log_setup():462] Logging internal logs to /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_145706-bhmxico8/logs/debug-internal.log
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_init.py:init():495] calling init triggers
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_init.py:init():498] wandb.init called with sweep_config: {}
+config: {}
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [wandb_init.py:init():548] starting backend
+2024-07-23 14:57:06,449 INFO    MainThread:2601882 [backend.py:_multiprocessing_setup():97] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2024-07-23 14:57:06,463 INFO    MainThread:2601882 [backend.py:ensure_launched():217] starting backend process...
+2024-07-23 14:57:06,472 INFO    MainThread:2601882 [backend.py:ensure_launched():222] started backend process with pid: 2602429
+2024-07-23 14:57:06,473 INFO    MainThread:2601882 [wandb_init.py:init():558] backend started and connected
+2024-07-23 14:57:06,477 INFO    MainThread:2601882 [wandb_init.py:init():634] updated telemetry
+2024-07-23 14:57:06,478 INFO    MainThread:2601882 [wandb_init.py:init():665] communicating run to backend with 30 second timeout
+2024-07-23 14:57:07,831 INFO    MainThread:2601882 [wandb_run.py:_on_init():1919] communicating current version
+2024-07-23 14:57:12,331 INFO    MainThread:2601882 [wandb_run.py:_on_init():1923] got version response 
+2024-07-23 14:57:12,332 INFO    MainThread:2601882 [wandb_init.py:init():700] starting run threads in backend
+2024-07-23 14:57:13,636 INFO    MainThread:2601882 [wandb_run.py:_console_start():1893] atexit reg
+2024-07-23 14:57:13,637 INFO    MainThread:2601882 [wandb_run.py:_redirect():1766] redirect: SettingsConsole.REDIRECT
+2024-07-23 14:57:13,637 INFO    MainThread:2601882 [wandb_run.py:_redirect():1771] Redirecting console.
+2024-07-23 14:57:13,638 INFO    MainThread:2601882 [wandb_run.py:_redirect():1827] Redirects installed.
+2024-07-23 14:57:13,638 INFO    MainThread:2601882 [wandb_init.py:init():732] run started, returning control to user process
+2024-07-23 15:14:13,648 INFO    MainThread:2601882 [wandb_run.py:_atexit_cleanup():1862] got exitcode: 255
+2024-07-23 15:14:13,648 INFO    MainThread:2601882 [wandb_run.py:_restore():1834] restore

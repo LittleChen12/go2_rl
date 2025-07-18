@@ -1,0 +1,182 @@
+{
+    "os": "Linux-5.15.0-116-generic-x86_64-with-glibc2.10",
+    "python": "3.8.19",
+    "heartbeatAt": "2024-07-24T14:45:18.467784",
+    "startedAt": "2024-07-24T14:45:16.103692",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "./train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "host": "pi-LEGION-REN7000K-26IRB",
+    "username": "pi",
+    "executable": "/home/pi/anaconda3/envs/HIT1/bin/python",
+    "cpu_count": 20,
+    "cpu_count_logical": 28,
+    "cpu_freq": {
+        "current": 3270.445464285714,
+        "min": 800.0,
+        "max": 5000.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 1200.394,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 2329.146,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 1551.683,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5600.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5600.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5600.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5600.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 5500.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        },
+        {
+            "current": 3400.0,
+            "min": 800.0,
+            "max": 4300.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 937.3305015563965,
+            "used": 157.44448852539062
+        }
+    },
+    "gpu": "NVIDIA GeForce RTX 4060",
+    "gpu_count": 1,
+    "gpu_devices": [
+        {
+            "name": "NVIDIA GeForce RTX 4060",
+            "memory_total": 8585740288
+        }
+    ],
+    "memory": {
+        "total": 15.33013916015625
+    }
+}

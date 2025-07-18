@@ -1,0 +1,11 @@
+package go2_lcm;
+
+struct Request {
+    float omega[3];
+    float eu_ang[3];
+    float command[3];
+    float q[12];
+    float dq[12];
+    float tau[12];
+}
+

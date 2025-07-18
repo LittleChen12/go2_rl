@@ -1,0 +1,173 @@
+2024-07-22 20:23:56,967 INFO    MainThread:615434 [internal.py:wandb_internal():90] W&B internal server running at pid: 615434, started at: 2024-07-22 20:23:56.967264
+2024-07-22 20:23:56,968 INFO    WriterThread:615434 [datastore.py:open_for_write():75] open: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/run-gh5texh3.wandb
+2024-07-22 20:23:56,969 DEBUG   SenderThread:615434 [sender.py:send():236] send: header
+2024-07-22 20:23:56,969 DEBUG   SenderThread:615434 [sender.py:send():236] send: run
+2024-07-22 20:23:56,972 DEBUG   SenderThread:615434 [git.py:repo():29] git repository is invalid
+2024-07-22 20:23:57,700 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: check_version
+2024-07-22 20:23:57,702 INFO    SenderThread:615434 [dir_watcher.py:__init__():216] watching files in: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files
+2024-07-22 20:23:57,702 INFO    SenderThread:615434 [sender.py:_start_run_threads():815] run started: gh5texh3 with start time 1721651036
+2024-07-22 20:23:57,702 DEBUG   SenderThread:615434 [sender.py:send():236] send: summary
+2024-07-22 20:23:57,702 INFO    SenderThread:615434 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-22 20:23:57,702 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: check_version
+2024-07-22 20:23:58,703 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-summary.json
+2024-07-22 20:23:59,068 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: run_start
+2024-07-22 20:23:59,098 DEBUG   HandlerThread:615434 [meta.py:__init__():35] meta init
+2024-07-22 20:23:59,098 DEBUG   HandlerThread:615434 [meta.py:__init__():49] meta init done
+2024-07-22 20:23:59,099 DEBUG   HandlerThread:615434 [meta.py:probe():209] probe
+2024-07-22 20:23:59,106 DEBUG   HandlerThread:615434 [git.py:repo():29] git repository is invalid
+2024-07-22 20:23:59,106 DEBUG   HandlerThread:615434 [meta.py:_save_pip():53] save pip
+2024-07-22 20:23:59,106 DEBUG   HandlerThread:615434 [meta.py:_save_pip():67] save pip done
+2024-07-22 20:23:59,106 DEBUG   HandlerThread:615434 [meta.py:_save_conda():74] save conda
+2024-07-22 20:23:59,704 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/conda-environment.yaml
+2024-07-22 20:23:59,704 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/requirements.txt
+2024-07-22 20:24:00,331 DEBUG   HandlerThread:615434 [meta.py:_save_conda():84] save conda done
+2024-07-22 20:24:00,331 DEBUG   HandlerThread:615434 [meta.py:probe():247] probe done
+2024-07-22 20:24:00,354 DEBUG   SenderThread:615434 [sender.py:send():236] send: files
+2024-07-22 20:24:00,354 INFO    SenderThread:615434 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2024-07-22 20:24:00,357 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-22 20:24:00,357 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: stop_status
+2024-07-22 20:24:00,704 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/conda-environment.yaml
+2024-07-22 20:24:00,704 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/output.log
+2024-07-22 20:24:00,704 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-metadata.json
+2024-07-22 20:24:01,095 DEBUG   SenderThread:615434 [sender.py:send():236] send: telemetry
+2024-07-22 20:24:01,095 DEBUG   SenderThread:615434 [sender.py:send():236] send: telemetry
+2024-07-22 20:24:02,705 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/output.log
+2024-07-22 20:24:02,851 INFO    Thread-11 :615434 [upload_job.py:push():138] Uploaded file /tmp/tmpmefjbk5kwandb/pnft14sw-wandb-metadata.json
+2024-07-22 20:24:03,870 DEBUG   SenderThread:615434 [sender.py:send():236] send: exit
+2024-07-22 20:24:03,871 INFO    SenderThread:615434 [sender.py:send_exit():372] handling exit code: 1
+2024-07-22 20:24:03,871 INFO    SenderThread:615434 [sender.py:send_exit():374] handling runtime: 4
+2024-07-22 20:24:03,871 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:03,871 INFO    SenderThread:615434 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-22 20:24:03,872 INFO    SenderThread:615434 [sender.py:send_exit():380] send defer
+2024-07-22 20:24:03,872 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:03,872 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,872 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 0
+2024-07-22 20:24:03,873 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,873 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 0
+2024-07-22 20:24:03,873 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 1
+2024-07-22 20:24:03,873 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,873 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 1
+2024-07-22 20:24:03,970 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,970 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 1
+2024-07-22 20:24:03,970 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 2
+2024-07-22 20:24:03,970 DEBUG   SenderThread:615434 [sender.py:send():236] send: stats
+2024-07-22 20:24:03,970 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,970 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 2
+2024-07-22 20:24:03,971 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,971 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 2
+2024-07-22 20:24:03,971 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 3
+2024-07-22 20:24:03,971 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,971 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 3
+2024-07-22 20:24:03,971 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,971 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 3
+2024-07-22 20:24:03,971 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 4
+2024-07-22 20:24:03,972 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,972 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 4
+2024-07-22 20:24:03,972 DEBUG   SenderThread:615434 [sender.py:send():236] send: summary
+2024-07-22 20:24:03,972 INFO    SenderThread:615434 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-22 20:24:03,972 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,972 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 4
+2024-07-22 20:24:03,972 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 5
+2024-07-22 20:24:03,972 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:03,972 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 5
+2024-07-22 20:24:03,972 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:03,972 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 5
+2024-07-22 20:24:03,975 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:04,677 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 6
+2024-07-22 20:24:04,677 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:04,678 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:04,679 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 6
+2024-07-22 20:24:04,679 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:04,679 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 6
+2024-07-22 20:24:04,679 INFO    SenderThread:615434 [dir_watcher.py:finish():353] shutting down directory watcher
+2024-07-22 20:24:04,706 INFO    Thread-7  :615434 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-summary.json
+2024-07-22 20:24:04,706 INFO    SenderThread:615434 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/output.log
+2024-07-22 20:24:04,707 INFO    SenderThread:615434 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/config.yaml
+2024-07-22 20:24:04,707 INFO    SenderThread:615434 [dir_watcher.py:finish():383] scan: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files
+2024-07-22 20:24:04,707 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/requirements.txt requirements.txt
+2024-07-22 20:24:04,707 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/conda-environment.yaml conda-environment.yaml
+2024-07-22 20:24:04,708 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-metadata.json wandb-metadata.json
+2024-07-22 20:24:04,708 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/config.yaml config.yaml
+2024-07-22 20:24:04,716 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/output.log output.log
+2024-07-22 20:24:04,717 INFO    SenderThread:615434 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-summary.json wandb-summary.json
+2024-07-22 20:24:04,717 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 7
+2024-07-22 20:24:04,718 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:04,718 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 7
+2024-07-22 20:24:04,724 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:04,724 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 7
+2024-07-22 20:24:04,724 INFO    SenderThread:615434 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-22 20:24:04,780 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:04,780 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:04,882 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:04,883 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:04,985 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:04,985 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,087 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,087 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,189 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,189 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,291 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,292 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,394 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,394 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,496 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,497 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,599 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,599 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,701 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,701 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,803 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,803 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:05,905 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:05,906 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,008 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,008 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,110 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,110 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,213 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,213 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,315 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,316 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,418 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,419 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,520 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,520 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,622 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,622 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,722 INFO    Thread-13 :615434 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/conda-environment.yaml
+2024-07-22 20:24:06,724 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,724 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,826 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,827 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,866 INFO    Thread-16 :615434 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/wandb-summary.json
+2024-07-22 20:24:06,929 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:06,929 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:06,930 INFO    Thread-15 :615434 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/output.log
+2024-07-22 20:24:06,980 INFO    Thread-12 :615434 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/requirements.txt
+2024-07-22 20:24:07,031 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:07,031 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:07,133 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:07,134 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:07,234 INFO    Thread-14 :615434 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/files/config.yaml
+2024-07-22 20:24:07,236 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:07,236 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:07,338 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:07,338 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: poll_exit
+2024-07-22 20:24:07,435 INFO    Thread-6  :615434 [sender.py:transition_state():393] send defer: 8
+2024-07-22 20:24:07,436 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:07,436 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 8
+2024-07-22 20:24:07,436 DEBUG   SenderThread:615434 [sender.py:send_request():250] send_request: defer
+2024-07-22 20:24:07,436 INFO    SenderThread:615434 [sender.py:send_request_defer():389] handle sender defer: 8
+2024-07-22 20:24:07,440 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: poll_exit
+2024-07-22 20:24:07,529 WARNING MainThread:615434 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-22 20:24:07,726 WARNING MainThread:615434 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2024-07-22 20:24:07,726 ERROR   MainThread:615434 [internal.py:wandb_internal():156] Internal process interrupted.
+2024-07-22 20:24:07,951 INFO    SenderThread:615434 [sender.py:transition_state():393] send defer: 9
+2024-07-22 20:24:07,951 INFO    SenderThread:615434 [sender.py:finish():1114] shutting down sender
+2024-07-22 20:24:07,951 INFO    SenderThread:615434 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-22 20:24:07,952 INFO    SenderThread:615434 [file_pusher.py:join():176] waiting for file pusher
+2024-07-22 20:24:07,952 DEBUG   HandlerThread:615434 [handler.py:handle_request():140] handle_request: defer
+2024-07-22 20:24:07,952 INFO    HandlerThread:615434 [handler.py:handle_request_defer():163] handle defer: 9
+2024-07-22 20:24:07,952 INFO    HandlerThread:615434 [handler.py:finish():806] shutting down handler
+2024-07-22 20:24:07,975 INFO    WriterThread:615434 [datastore.py:close():279] close: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240722_202356-gh5texh3/run-gh5texh3.wandb
+2024-07-22 20:24:07,975 INFO    MainThread:615434 [internal.py:handle_exit():80] Internal process exited

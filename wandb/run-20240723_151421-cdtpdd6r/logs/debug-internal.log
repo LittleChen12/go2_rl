@@ -1,0 +1,64 @@
+2024-07-23 15:14:22,215 INFO    MainThread:2660670 [internal.py:wandb_internal():90] W&B internal server running at pid: 2660670, started at: 2024-07-23 15:14:22.215282
+2024-07-23 15:14:22,217 DEBUG   SenderThread:2660670 [sender.py:send():236] send: header
+2024-07-23 15:14:22,217 INFO    WriterThread:2660670 [datastore.py:open_for_write():75] open: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/run-cdtpdd6r.wandb
+2024-07-23 15:14:22,217 DEBUG   SenderThread:2660670 [sender.py:send():236] send: run
+2024-07-23 15:14:22,220 DEBUG   SenderThread:2660670 [git.py:repo():29] git repository is invalid
+2024-07-23 15:14:22,895 DEBUG   HandlerThread:2660670 [handler.py:handle_request():140] handle_request: check_version
+2024-07-23 15:14:22,900 INFO    SenderThread:2660670 [dir_watcher.py:__init__():216] watching files in: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files
+2024-07-23 15:14:22,900 INFO    SenderThread:2660670 [sender.py:_start_run_threads():815] run started: cdtpdd6r with start time 1721718861
+2024-07-23 15:14:22,900 DEBUG   SenderThread:2660670 [sender.py:send():236] send: summary
+2024-07-23 15:14:22,901 INFO    SenderThread:2660670 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-23 15:14:22,901 DEBUG   SenderThread:2660670 [sender.py:send_request():250] send_request: check_version
+2024-07-23 15:14:23,901 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-summary.json
+2024-07-23 15:14:26,157 DEBUG   HandlerThread:2660670 [handler.py:handle_request():140] handle_request: run_start
+2024-07-23 15:14:26,190 DEBUG   HandlerThread:2660670 [meta.py:__init__():35] meta init
+2024-07-23 15:14:26,190 DEBUG   HandlerThread:2660670 [meta.py:__init__():49] meta init done
+2024-07-23 15:14:26,190 DEBUG   HandlerThread:2660670 [meta.py:probe():209] probe
+2024-07-23 15:14:26,197 DEBUG   HandlerThread:2660670 [git.py:repo():29] git repository is invalid
+2024-07-23 15:14:26,197 DEBUG   HandlerThread:2660670 [meta.py:_save_pip():53] save pip
+2024-07-23 15:14:26,198 DEBUG   HandlerThread:2660670 [meta.py:_save_pip():67] save pip done
+2024-07-23 15:14:26,198 DEBUG   HandlerThread:2660670 [meta.py:_save_conda():74] save conda
+2024-07-23 15:14:26,901 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/conda-environment.yaml
+2024-07-23 15:14:26,902 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/requirements.txt
+2024-07-23 15:14:27,431 DEBUG   HandlerThread:2660670 [meta.py:_save_conda():84] save conda done
+2024-07-23 15:14:27,431 DEBUG   HandlerThread:2660670 [meta.py:probe():247] probe done
+2024-07-23 15:14:27,454 DEBUG   SenderThread:2660670 [sender.py:send():236] send: files
+2024-07-23 15:14:27,454 INFO    SenderThread:2660670 [sender.py:_save_file():952] saving file wandb-metadata.json with policy now
+2024-07-23 15:14:27,457 DEBUG   HandlerThread:2660670 [handler.py:handle_request():140] handle_request: stop_status
+2024-07-23 15:14:27,458 DEBUG   SenderThread:2660670 [sender.py:send_request():250] send_request: stop_status
+2024-07-23 15:14:27,902 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/conda-environment.yaml
+2024-07-23 15:14:27,902 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log
+2024-07-23 15:14:27,902 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_created():269] file/dir created: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-metadata.json
+2024-07-23 15:14:28,075 DEBUG   SenderThread:2660670 [sender.py:send():236] send: telemetry
+2024-07-23 15:14:28,868 INFO    Thread-11 :2660670 [upload_job.py:push():138] Uploaded file /tmp/tmp9f89073hwandb/4kjntdcl-wandb-metadata.json
+2024-07-23 15:14:29,902 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log
+2024-07-23 15:14:30,415 DEBUG   HandlerThread:2660670 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-23 15:14:31,903 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log
+2024-07-23 15:14:32,625 DEBUG   HandlerThread:2660670 [handler.py:handle_request():140] handle_request: partial_history
+2024-07-23 15:14:32,627 DEBUG   SenderThread:2660670 [sender.py:send():236] send: history
+2024-07-23 15:14:32,627 DEBUG   SenderThread:2660670 [sender.py:send():236] send: summary
+2024-07-23 15:14:32,627 INFO    SenderThread:2660670 [sender.py:_save_file():952] saving file wandb-summary.json with policy end
+2024-07-23 15:14:32,903 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-summary.json
+2024-07-23 15:14:33,903 INFO    Thread-7  :2660670 [dir_watcher.py:_on_file_modified():286] file/dir modified: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log
+2024-07-23 15:14:34,462 WARNING MainThread:2660670 [internal.py:wandb_internal():153] Internal process interrupt: 1
+2024-07-23 15:14:34,465 DEBUG   SenderThread:2660670 [sender.py:send():236] send: telemetry
+2024-07-23 15:14:34,632 WARNING MainThread:2660670 [internal.py:wandb_internal():153] Internal process interrupt: 2
+2024-07-23 15:14:34,632 ERROR   MainThread:2660670 [internal.py:wandb_internal():156] Internal process interrupted.
+2024-07-23 15:14:35,466 INFO    WriterThread:2660670 [datastore.py:close():279] close: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/run-cdtpdd6r.wandb
+2024-07-23 15:14:35,466 INFO    SenderThread:2660670 [sender.py:finish():1114] shutting down sender
+2024-07-23 15:14:35,466 INFO    SenderThread:2660670 [dir_watcher.py:finish():353] shutting down directory watcher
+2024-07-23 15:14:35,904 INFO    SenderThread:2660670 [dir_watcher.py:finish():383] scan: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files
+2024-07-23 15:14:35,904 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/requirements.txt requirements.txt
+2024-07-23 15:14:35,905 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/conda-environment.yaml conda-environment.yaml
+2024-07-23 15:14:35,905 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-metadata.json wandb-metadata.json
+2024-07-23 15:14:35,905 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/config.yaml config.yaml
+2024-07-23 15:14:35,905 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log output.log
+2024-07-23 15:14:35,906 INFO    SenderThread:2660670 [dir_watcher.py:finish():397] scan save: /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-summary.json wandb-summary.json
+2024-07-23 15:14:35,910 INFO    SenderThread:2660670 [file_pusher.py:finish():171] shutting down file pusher
+2024-07-23 15:14:35,910 INFO    SenderThread:2660670 [file_pusher.py:join():176] waiting for file pusher
+2024-07-23 15:14:37,230 INFO    Thread-14 :2660670 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/config.yaml
+2024-07-23 15:14:37,268 INFO    Thread-13 :2660670 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/conda-environment.yaml
+2024-07-23 15:14:37,275 INFO    Thread-16 :2660670 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/wandb-summary.json
+2024-07-23 15:14:37,823 INFO    Thread-15 :2660670 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/output.log
+2024-07-23 15:14:39,527 INFO    Thread-12 :2660670 [upload_job.py:push():138] Uploaded file /home/pi/Downloads/LocomotionWithNP3O-master/wandb/run-20240723_151421-cdtpdd6r/files/requirements.txt
+2024-07-23 15:14:40,216 INFO    MainThread:2660670 [internal.py:handle_exit():80] Internal process exited
