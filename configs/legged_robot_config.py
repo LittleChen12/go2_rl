@@ -1,20 +1,21 @@
-from .base_config  import BaseConfig
+from .base_config import BaseConfig
+
 
 class LeggedRobotCfg(BaseConfig):
     class env:
         num_envs = 512
 
         n_scan = 132
-        n_priv_latent = 4 + 1 + 12 + 12 + 6 
-        n_proprio = 46#历史
-        history_len = 10#长期历史
+        n_priv_latent = 4 + 1 + 12 + 12 + 6
+        n_proprio = 46  # 历史
+        history_len = 10  # 长期历史
 
-        num_observations = n_proprio + n_scan + history_len*n_proprio + n_priv_latent 
-        num_privileged_obs = None # if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise 
+        num_observations = n_proprio + n_scan + history_len * n_proprio + n_priv_latent
+        num_privileged_obs = None  # if not None a priviledge_obs_buf will be returned by step() (critic obs for assymetric training). None is returned otherwise
         num_actions = 12
         env_spacing = 3.  # not used with heightfields/trimeshes 
-        send_timeouts = True # send time out information to the algorithm
-        episode_length_s = 20 # episode length in seconds
+        send_timeouts = True  # send time out information to the algorithm
+        episode_length_s = 20  # episode length in seconds
 
         history_encoding = True
 
@@ -23,7 +24,7 @@ class LeggedRobotCfg(BaseConfig):
 
     class cost:
         num_costs = 1
-    
+
     class depth:
         use_camera = False
         camera_num_envs = 192
@@ -39,11 +40,11 @@ class LeggedRobotCfg(BaseConfig):
         resized = (87, 58)
         horizontal_fov = 87
         buffer_len = 2
-        
+
         near_clip = 0
         far_clip = 2
         dis_noise = 0.0
-        
+
         scale = 1
         invert = True
 
@@ -87,8 +88,8 @@ class LeggedRobotCfg(BaseConfig):
         global_reference = False
 
         class ranges:
-            lin_vel_x = [-1.5, 1.5]  # min max [m/s]
-            lin_vel_y = [-1.5, 1.5]  # min max [m/s]
+            lin_vel_x = [-1.0, 1.0]  # min max [m/s]
+            lin_vel_y = [-1.0, 1.0]  # min max [m/s]
             ang_vel_yaw = [-1, 1]  # min max [rad/s]
             heading = [-3.14, 3.14]
 
@@ -160,7 +161,7 @@ class LeggedRobotCfg(BaseConfig):
         # action_delay_view = 1
         # action_buf_len = 5
 
-    class rewards:#被基础类继承 同名覆盖
+    class rewards:  # 被基础类继承 同名覆盖
         class scales:
             termination = -0.0
             tracking_lin_vel = 1.0
@@ -194,20 +195,22 @@ class LeggedRobotCfg(BaseConfig):
             dof_pos = 1.0
             dof_vel = 0.05
             height_measurements = 5.0
-        clip_observations = 100.
-        #clip_actions = 1.2
-        clip_actions = 100 #控制限制
 
-    class noise:#测量噪声
+        clip_observations = 100.
+        # clip_actions = 1.2
+        clip_actions = 100  # 控制限制
+
+    class noise:  # 测量噪声
         add_noise = True
         noise_level = 1.0  # scales other values
+
         class noise_scales:
             dof_pos = 0.01
             dof_vel = 1.5
             lin_vel = 0.1
             ang_vel = 0.2
             gravity = 0.05
-            quat = 0.03 
+            quat = 0.03
             height_measurements = 0.02
             contact_states = 0.05
 
@@ -236,10 +239,11 @@ class LeggedRobotCfg(BaseConfig):
             default_buffer_size_multiplier = 5
             contact_collection = 2  # 0: never, 1: last sub-step, 2: all sub-steps (default=2)
 
+
 class LeggedRobotCfgPPO(BaseConfig):
     seed = 1
     runner_class_name = 'OnPolicyRunner'
- 
+
     class policy:
         init_noise_std = 1.0
         continue_from_last_std = True
@@ -247,14 +251,14 @@ class LeggedRobotCfgPPO(BaseConfig):
         actor_hidden_dims = [512, 256, 128]
         critic_hidden_dims = [512, 256, 128]
         priv_encoder_dims = [64, 20]
-        activation = 'elu' # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
+        activation = 'elu'  # can be elu, relu, selu, crelu, lrelu, tanh, sigmoid
         # only for 'ActorCriticRecurrent':
         rnn_type = 'lstm'
         rnn_hidden_size = 512
         rnn_num_layers = 1
 
         tanh_encoder_output = False
-    
+
     class algorithm:
         # training params
         value_loss_coef = 1.0
@@ -262,9 +266,9 @@ class LeggedRobotCfgPPO(BaseConfig):
         clip_param = 0.2
         entropy_coef = 0.01
         num_learning_epochs = 5
-        num_mini_batches = 4 # mini batch size = num_envs*nsteps / nminibatches
-        learning_rate = 1.e-3 #5.e-4
-        schedule = 'adaptive' # could be adaptive, fixed
+        num_mini_batches = 4  # mini batch size = num_envs*nsteps / nminibatches
+        learning_rate = 1.e-3  # 5.e-4
+        schedule = 'adaptive'  # could be adaptive, fixed
         gamma = 0.99
         lam = 0.95
         desired_kl = 0.01
@@ -273,7 +277,7 @@ class LeggedRobotCfgPPO(BaseConfig):
         dagger_update_freq = 20
         priv_reg_coef_schedual = [0, 0.1, 2000, 3000]
         priv_reg_coef_schedual_resume = [0, 0.1, 0, 1]
-    
+
     class depth_encoder:
         if_depth = LeggedRobotCfg.depth.use_camera
         depth_shape = LeggedRobotCfg.depth.resized
@@ -286,14 +290,13 @@ class LeggedRobotCfgPPO(BaseConfig):
         policy_class_name = 'ActorCriticRMA'
         runner_class_name = 'OnPolicyRunner'
         algorithm_class_name = 'PPO'
-        num_steps_per_env = 24 # per iteration
-        max_iterations = 500 # number of policy updates
+        num_steps_per_env = 24  # per iteration
+        max_iterations = 500  # number of policy updates
 
         # logging
-        save_interval = 100 # check for potential saves every this many iterations #保存间隔
+        save_interval = 100  # check for potential saves every this many iterations #保存间隔
         experiment_name = 'rough_a1'
         run_name = ''
         # load and resume
         resume = False
-        resume_path = None # updated from load_run and chkpt
-    
+        resume_path = None  # updated from load_run and chkpt

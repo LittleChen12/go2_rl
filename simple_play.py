@@ -36,9 +36,9 @@ def delete_files_in_directory(directory_path):
 def rand_commands(command_ranges,commands):
     commands[0] = random.uniform(command_ranges.lin_vel_x[0], command_ranges.lin_vel_x[1])
     commands[1] = random.uniform(command_ranges.lin_vel_y[0], command_ranges.lin_vel_y[1])
-    commands[2] = random.uniform(command_ranges.ang_vel_yaw[0], command_ranges.ang_vel_yaw[1])
+    commands[2] = 0
     # if self.cfg.commands.heading_command:
-    # commands[3] = random.uniform(command_ranges.heading[0], command_ranges.heading[1])
+    commands[3] = random.uniform(command_ranges.heading[0], command_ranges.heading[1])
     # else:
     #     self.commands[env_ids, 2] = torch_rand_float(self.command_ranges["ang_vel_yaw"][0], self.command_ranges["ang_vel_yaw"][1], (len(env_ids), 1), device=self.device).squeeze(1)
 
@@ -64,7 +64,7 @@ def play(args):
     env_cfg.terrain.curriculum = False
     env_cfg.noise.add_noise = False
     #env_cfg.terrain.mesh_type = 'plane'
-    env_cfg.domain_rand.push_robots = False
+    env_cfg.domain_rand.push_robots = True
     #env_cfg.domain_rand.randomize_friction = False
     env_cfg.domain_rand.randomize_base_com = False
     env_cfg.domain_rand.randomize_base_mass = False
@@ -101,7 +101,7 @@ def play(args):
     )
 
     model_dict = torch.load(os.path.join(ROOT_DIR, \
-    '/home/zhu/LocomotionWithNP3O-master/pre_train/go2/model_2000.pt'))#《---------------------调用的网络模型doghome
+    '/home/zhu/LocomotionWithNP3O-master/pre_train/go2/model_3000.pt'))#《---------------------调用的网络模型doghome
 
     #if 1:#full
     policy.load_state_dict(model_dict['model_state_dict'])
@@ -149,8 +149,8 @@ def play(args):
     xy_vel = 0
     feet_air_time = 0
 
-    env_cfg.commands.ranges.lin_vel_x = [-1, 1]
-    env_cfg.commands.ranges.lin_vel_y = [-1, 1]
+    env_cfg.commands.ranges.lin_vel_x = [-0.5, 0.5]
+    env_cfg.commands.ranges.lin_vel_y = [-0.5, 0.5]
     env_cfg.commands.ranges.ang_vel_yaw = [-1., 1.]
     env_cfg.commands.ranges.heading = [-1., 1.]
 
@@ -163,11 +163,11 @@ def play(args):
       initCanvas(3, 2, 100)
 
       plotter0 = Plotter(0, 'base_velx')
-      # plotter1 = Plotter(1, 'header')
-      #
-      # plotter2 = Plotter(2, 'joint hip')
-      # plotter3 = Plotter(3, 'joint thigh')
-      # plotter4 = Plotter(4, 'joint calf')
+      plotter1 = Plotter(1, 'header')
+
+      plotter2 = Plotter(2, 'joint hip')
+      plotter3 = Plotter(3, 'joint thigh')
+      plotter4 = Plotter(4, 'joint calf')
       # plotter5 = Plotter(5, 'joint 5')
     #
     for i in range(num_frames):
@@ -179,17 +179,34 @@ def play(args):
           commands=[0]*4#初始化为0的4维度
           rand_commands(env_cfg.commands.ranges,commands)
           print("resample comand:",commands)
-          # env.commands[:,0] = commands[0]#0.35#控制指令
-          # env.commands[:,1] = commands[1]#
-          # env.commands[:,2] = commands[2]#
-          # env.commands[:,3] = commands[3]# #header
-        env.commands[:,0] = 0#0.35#控制指令
-        env.commands[:,1] = 0#
-        env.commands[:,2] = 0.6#
-        env.commands[:,3] = 5# #header
+          env.commands[:,0] = commands[0]#0.35#控制指令
+          env.commands[:,1] = commands[1]#
+          env.commands[:,2] = commands[2]#
+          env.commands[:,3] = commands[3]# #header
+        # env.commands[:,0] = 0.3#0.35#控制指令
+        # env.commands[:,1] = 0#
+        # env.commands[:,2] = 0#
+        # env.commands[:,3] = 0# #header
 
         actions = policy.act_teacher(obs.half())# 1,736
         #print(actions)
+        if 0:#debug
+            actions[0,0]=0#FL
+            actions[0,1]=3
+            actions[0,2]=3
+
+            actions[0,3]=0#FR
+            actions[0,4]=3
+            actions[0,5]=3
+
+            actions[0,6]=0#RL
+            actions[0,7]=3
+            actions[0,8]=3
+
+            actions[0,9]=0#RR
+            actions[0,10]=3
+            actions[0,11]=3
+            print(obs[0,3:6]*57.3)#att
         # actions = torch.clamp(actions,-1.2,1.2)
         # print('amaomao-------------')
         # obs_cpu = obs.detach().cpu().numpy()  # 首先将Tensor移动到CPU，然后转换为NumPy数组
@@ -205,11 +222,11 @@ def play(args):
         if en_plot:
           #lin/ang vel
           plotter0.plotLine(env.base_lin_vel[0, 0].item(), env.commands[0, 0].item(), labels=['actual', 'command'])
-          # plotter1.plotLine(env.base_euler_xyz[0, 2].item(), env.commands[0, 3].item(), labels=['actual', 'command'])
+          plotter1.plotLine(env.base_euler_xyz[0, 2].item(), env.commands[0, 3].item(), labels=['actual', 'command'])
           # actions avg
-          # plotter2.plotLine(env.dof_pos[0, 0].item(), env.action_avg[0, 0].item(),labels=['q', 'exp'])
-          # plotter3.plotLine(env.dof_pos[0, 1].item(), env.action_avg[0, 1].item(),labels=['q', 'exp'])
-          # plotter4.plotLine(env.dof_pos[0, 2].item(), env.action_avg[0, 2].item(),labels=['q', 'exp'])
+          plotter2.plotLine(env.dof_pos[0, 0].item(), env.action_avg[0, 0].item(),labels=['q', 'exp'])
+          plotter3.plotLine(env.dof_pos[0, 1].item(), env.action_avg[0, 1].item(),labels=['q', 'exp'])
+          plotter4.plotLine(env.dof_pos[0, 2].item(), env.action_avg[0, 2].item(),labels=['q', 'exp'])
         if RECORD_FRAMES:
             img = env.gym.get_camera_image(env.sim, env.envs[0], cam_handle, gymapi.IMAGE_COLOR).reshape((512,512,4))[:,:,:3]
             if video is None:
@@ -232,6 +249,9 @@ def play(args):
 
 if __name__ == '__main__':
     task_registry.register("go2N3poHim",LeggedRobot,Go2ConstraintHimRoughCfg(),Go2ConstraintHimRoughCfgPPO())
+    task_registry.register("Tinymal",LeggedRobot,TinymalConstraintHimRoughCfg(),TinymalConstraintHimRoughCfgPPO())
+    task_registry.register("go2N3poTransP1",LeggedRobot,Go2ConstraintTransP1RoughCfg(),Go2ConstraintTransP1RoughCfgPPO())
+    task_registry.register("go2N3poTransP2",LeggedRobot,Go2ConstraintTransP2RoughCfg(),Go2ConstraintTransP2RoughCfgPPO())
 
     RECORD_FRAMES = False
     args = get_args()

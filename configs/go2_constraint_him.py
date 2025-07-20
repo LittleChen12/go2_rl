@@ -32,7 +32,7 @@ from configs.legged_robot_config import LeggedRobotCfg, LeggedRobotCfgPPO
 
 class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
     class env(LeggedRobotCfg.env):
-        num_envs = 2000
+        num_envs = 1200
 
         n_scan = 187 # 扫描数据，例如雷达啥的
         n_priv_latent =  4 + 1 + 12 + 12 + 12 + 6 + 1 + 4 + 1 - 3 + 4 # 私有观测
@@ -84,25 +84,22 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
         action_scale = 0.25
         # decimation: Number of control action updates @ sim DT per policy DT
         decimation = 4
-        hip_scale_reduction = 0.5
+        hip_scale_reduction = 1
 
         use_filter = True
 
     class commands( LeggedRobotCfg.control ):
-        curriculum = True
-        max_curriculum = 1.5
-        max_backward_curriculum = 1.0
-        max_lat_curriculum = 1.0
-
+        curriculum = False
+        max_curriculum = 1.
         num_commands = 4  # default: lin_vel_x, lin_vel_y, ang_vel_yaw, heading (in heading mode ang_vel_yaw is recomputed from heading error)
         resampling_time = 10.  # time before command are changed[s]
         heading_command = True  # if true: compute ang vel command from heading error
         global_reference = False
 
         class ranges:
-            lin_vel_x = [-1.5, 1.5]  # min max [m/s]
-            lin_vel_y = [-1.5, 1.5]  # min max [m/s]
-            ang_vel_yaw = [-1.5, 1.5]  # min max [rad/s]
+            lin_vel_x = [-1.0, 1.0]  # min max [m/s]
+            lin_vel_y = [-1.0, 1.0]  # min max [m/s]
+            ang_vel_yaw = [-1, 1]  # min max [rad/s]
             heading = [-3.14, 3.14]
 
     class asset( LeggedRobotCfg.asset ):
@@ -113,59 +110,58 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
         terminate_after_contacts_on = ["base","thigh"]
         self_collisions = 0 # 1 to disable, 0 to enable...bitwise filter
         flip_visual_attachments = True
-  
+
     class rewards( LeggedRobotCfg.rewards ):
         soft_dof_pos_limit = 0.9
-        base_height_target = 0.32      #m 机体高度
-        clearance_height_target = -0.3 #m 摆动腿设定相对机体高度
-        tracking_sigma = 1.0 #0.25 小了探索出来爬行 300  0.15 小惯量  0.25 大惯量
+        base_height_target = 0.35      #m 机体高度
+        clearance_height_target = -0.25 #m 摆动腿设定相对机体高度
+        tracking_sigma = 0.7 #0.25 小了探索出来爬行 300  0.15 小惯量  0.25 大惯量
 
-        cycle_time=0.5 #s 
+        cycle_time=0.5 #s
         touch_thr= 5 #N
-        command_dead = 0.2
+        command_dead = 0.1
         target_joint_pos_scale = 0.27    # rad
 
         max_contact_force = 150 #N
         class scales( LeggedRobotCfg.rewards.scales ):
             powers = -2e-5
             tracking_lin_vel = 3.0
-            tracking_ang_vel = 1.0
+            tracking_ang_vel = 2.0
             base_acc = -0.02
             lin_vel_z = -2.0
             ang_vel_xy = -0.05
             dof_vel = 0.0
             dof_acc = -2e-7
-            base_height = -2.0
+            base_height = -1.0
 
             collision = 0.0
             feet_stumble = 0.0
-            action_rate = -0.04
+            action_rate = -0.01
             action_smoothness = -0.01
-            stand_still = -0.7
+            stand_still = -0.05
 
             feet_air_time = 2
-            foot_clearance = -2
+            foot_clearance = -1
             no_fly  = 0.01
-            orientation_eular = 0.35  # 0.05可以探索爬行
+            orientation_eular = 0.15  # 0.05可以探索爬行
             # default_joint_pos=-0.02
-            joint_ref_pos = 1
+            joint_ref_pos =0.505
             # feet_contact_number=-1
-            hip_pos = -0.5 # 对髋关节偏离的惩罚
+            hip_pos = -0.5
 
             feet_contact_forces = -0.01
-            vel_mismatch_exp = 0.1  # lin_z; ang x,y  速度奖励大可以鼓励机器人更多移动，与摆腿耦合
+            vel_mismatch_exp = 0.3  # lin_z; ang x,y  速度奖励大可以鼓励机器人更多移动，与摆腿耦合
             low_speed = 0.2
             track_vel_hard = 0.5
-            foot_slip = -0.05
+            foot_slip = -0.1
 
     class domain_rand( LeggedRobotCfg.domain_rand):
         randomize_friction = True
         friction_range = [0.2, 2.75]
-        randomize_restitution = False
+        randomize_restitution = True
         restitution_range = [0.0,1.0]
         randomize_base_mass = True
         added_mass_range = [-1., 3.]
-        # added_mass_range = [-1,2.]
         randomize_base_com = True
         added_com_range = [-0.1, 0.1]
         push_robots = True
@@ -182,10 +178,6 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
         randomize_lag_timesteps = True
         lag_timesteps = 6
 
-        # disturbance = True
-        # disturbance_range = [-30.0, 30.0]
-        # disturbance_interval = 8
-    
     class depth( LeggedRobotCfg.depth):
         use_camera = False
         camera_num_envs = 192
@@ -201,14 +193,14 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
         resized = (87, 58)
         horizontal_fov = 87
         buffer_len = 2
-        
+
         near_clip = 0
         far_clip = 2
         dis_noise = 0.0
-        
+
         scale = 1
         invert = True
-    
+
     class costs:
         class scales:
             pos_limit = 0.1
@@ -222,15 +214,6 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
             base_height = 0.1
 
         class d_values:#约束的上界
-            # pos_limit = 0.01
-            # torque_limit = 0.06
-            # dof_vel_limits = 0.1
-            # feet_air_time = 0.1
-            # acc_smoothness = 0.0
-            # collision = 0.0
-            # stand_still = 0.0
-            # hip_pos = 0.0
-            # base_height = 0.04
             pos_limit = 0.0
             torque_limit = 0.0
             dof_vel_limits = 0.0
@@ -240,12 +223,12 @@ class Go2ConstraintHimRoughCfg( LeggedRobotCfg ):
             stand_still = 0.0
             hip_pos = 0.0
             base_height = 0.0
- 
+
     class cost:#约束函数数量
         num_costs = 9
-    
+
     class terrain(LeggedRobotCfg.terrain):#采用地形
-        mesh_type = 'plane'  # "heightfield" # none, plane, heightfield or trimesh
+        mesh_type = 'trimesh'  # "heightfield" # none, plane, heightfield or trimesh
         measure_heights = True
         include_act_obs_pair_buf = False
 
@@ -284,18 +267,18 @@ class Go2ConstraintHimRoughCfgPPO( LeggedRobotCfgPPO ):
 
         teacher_act = False
         imi_flag = False#---------------
-      
-    class runner( LeggedRobotCfgPPO.runner ):#重新载入预训练模型resume
+
+    class runner(LeggedRobotCfgPPO.runner):#重新载入预训练模型resume
         run_name = 'test_barlowtwins'
         experiment_name = 'rough_go2_constraint'
         policy_class_name = 'ActorCriticMixedBarlowTwins'
         runner_class_name = 'OnConstraintPolicyRunner'
         algorithm_class_name = 'NP3O'
-        max_iterations = 2000
+        max_iterations = 6000
         save_interval = 500 #保存周期
         num_steps_per_env = 24
-        resume = False
-        resume_path = '/home/zhu/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jul16_21-25-48_test_barlowtwins/model_500.pt'
- 
+        resume = True
+        resume_path = '/home/zhu/LocomotionWithNP3O-master/logs/rough_go2_constraint/Jul20_13-48-03_test_barlowtwins/model_5000.pt'
 
-  
+
+

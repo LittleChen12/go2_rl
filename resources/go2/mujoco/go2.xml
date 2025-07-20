@@ -15,7 +15,7 @@
     <body name="base" pos="0 0 0.42">
       <inertial pos="0.0211894 0 -0.00537167" quat="-0.000544412 0.71347 -0.00173648 0.700684" mass="6.923" diaginertia="0.10719 0.098243 0.0244752"/>
       <site name="imu"
-        pos="0 0 0.04"
+        pos="0 0 0"
         size="0.005"
         type="sphere"/>
       <joint name="floating_base_joint" type="free" limited="false" actuatorfrclimited="false"/>
